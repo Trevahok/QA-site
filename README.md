@@ -2,7 +2,7 @@
 A new quora and stack overflow competitor based on django
 
 
-## Installation
+## Instructions
 > 1. Create a development 
 ```sh
 sudo pip install virtualenv
