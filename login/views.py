@@ -15,4 +15,5 @@ def login(request):
             return render(request,'login/login.html',{'user':''})
         else:
             if user.password==password:
+                request.session['user']=username
                 return render(request,'alwin/home.html',{'user':username})
