@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            var cnt=1;
+            function change()
+            {
+                console.log(cnt);
+                var root=document.getElementById('background');
+                root.className='bg'+cnt;
+                var render=document.getElementById('render');
+                render.className='bg'+(cnt+1);
+                cnt=(cnt<5)?cnt+1:1;
+            }
+            setInterval(change,5000);
+        </script>
         <title>Login</title>
         {% load static %}
         <link rel="stylesheet" type="text/css" href={% static "login/login.css"%}>
