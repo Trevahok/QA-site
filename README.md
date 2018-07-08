@@ -30,6 +30,9 @@ sudo apt-get install python-pip python-dev libmysqlclient-dev
 + MacOs
 ```sh
 brew install mysql
+mysql -u root -p
+```
+```sql
 ```
 > 6. Create a database
 
