@@ -6,6 +6,9 @@
         <link rel="stylesheet" type="text/css" href={% static "login/login.css"%}>
     </head>
     <body >
+        {% if form.errors %}
+        <h1>{{form.errors }}</h1>
+        {% endif %}
         <div id="render" class="bg1">
             <div id="background" class="bg1">
             <div id="container">
