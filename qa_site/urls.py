@@ -18,10 +18,9 @@ from django.urls import path,include
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from . import views
+import registration.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('login/',auth_views.login,{'template_name':'login.html'},name ='login'),
-    url('logout/', auth_views.logout,name = 'logout'),
+    path('reg/',include(registration.urls)),
     path('home/',views.home,name= 'home'),
-    url('signup/',views.signup,name = 'signup')
 ]
