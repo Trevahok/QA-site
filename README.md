@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```sh
 sudo apt-get install python-pip python-dev libmysqlclient-dev
 ```
-+ Mac Os
++ MacOs
 ```sh
 brew install mysql
 ```
@@ -44,12 +44,19 @@ CREATE DATABASE qa;
 ```sh
 ./manage.py makemigrations
 ```
-
++ MacOs
+```sh
+python3 manage.py makemigrations
+```
 > 8. Server instructions
 
 ```sh
-./manage.py runserver 0:8000
+./manage.py runserver 
+```
++ MacOs
+```sh
+python3 manage.py runserver
 ```
 
 > 9. Run in the browser
-+ Run localhost:8000 in your browser 
++ open localhost:8000 in your browser 
