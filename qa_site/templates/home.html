@@ -1,1 +1,2 @@
 {% if user.is_authenticated %} hello there {% endif%}
+<a href="{% url 'login' %}?next={{request.path}}">Login</a>
