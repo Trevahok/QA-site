@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href={% static "login/login.css"%}>
     </head>
     <body >
-        {% if user  %}
+        {% if not user.is_authenticated  %}
         <center>
         <h5 style="color: red">Invalid login</h5>
         </center>
