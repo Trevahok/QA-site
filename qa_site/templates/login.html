@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>A decent login page</title>
+        <title>Login</title>
         {% load static %}
         <link rel="stylesheet" type="text/css" href={% static "login/login.css"%}>
     </head>
     <body >
-        {% if not user.is_authenticated  %}
-        <center>
-        <h5 style="color: red">Invalid login</h5>
-        </center>
-        <br>
-        {% endif %}
-        <div class="main-box">
-            <h1>Login</h1>
-            <div class="data-box">
-                <form action="" method="post">
-                    {% csrf_token %}
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password">
-                    <br>
-                    <br>
-                    <input class="button" type="submit" value="Login">
-                </form>
+        <div id="render" class="bg1">
+            <div id="background" class="bg1">
+            <div id="container">
+            <form id="login" action="" method="post">
+                {% csrf_token %}
+                <input type="text" id="username" class="in" placeholder="Username" />
+                <input type="password" id="password" class="in" placeholder="Password" />
+                <input type="submit" value="LOG IN" class="in submit sub_log"/>
+                <input  type="button" value="SIGN UP" class="in submit"/>
+                <span><a href="#">Forgot Password?</a></span>
+            </form>
             </div>
-        </div> 
+            </div>
+        </div>
     </body>
 </html>
