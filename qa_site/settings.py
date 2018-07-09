@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'qa_site.registration.middleware.lastseen',
+    'registration.middleware.lastseen.SetLastVisitMiddleware',
 ]
 
 ROOT_URLCONF = 'qa_site.urls'

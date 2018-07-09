@@ -1,12 +1,9 @@
-import datetime
+from django.utils.timezone import now
 
-class LastSeen(object):
+class SetLastVisitMiddleware(object):
+    def process_response(self, request, response):
+        if request.user.is_authenticated():
+            # Update last visit time after request finished processing.
+            User.objects.filter(pk=request.user.pk).update(last_visit=now())
+        return response
 
-    def process_request(self, request):
-        user = request.user
-        if not user.is_authenticated(): return None  
-        up = user.get_profile()
-        up.last_login_on = datetime.now()
-        up.last_activity_ip = request.META['REMOTE_ADDR']
-        up.save()
-        return None
