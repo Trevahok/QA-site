@@ -1,6 +1,6 @@
 import datetime
 
-class LastSeen(object):
+class LastIP(object):
     def __init__(self, get_response):
         self.get_response = get_response
 
@@ -12,7 +12,6 @@ class LastSeen(object):
         if not user.is_authenticated():
             return None
         up = user.get_or_create_profile()
-        up.last_login_on = datetime.now()
         up.last_activity_ip = request.META['REMOTE_ADDR']
         up.save()
         return None

@@ -1,6 +1,7 @@
 from django.core.validators import RegexValidator
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 # Create your models here.
 class UserProfile(models.Model):
     ''' A model for user profile page that stores all the specifics. '''
@@ -13,11 +14,15 @@ class UserProfile(models.Model):
 
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    email_id = models.EmailField()
+    email_id = models.EmailField(blank=False)
     ph_no = models.CharField(validators=[phone_regex], max_length=17, blank=True)
     reg_date = models.DateField(blank = False)
-    last_login = models.DateTimeField()
     last_activity_ip = models.GenericIPAddressField()
 
     def __str__(self):
         return self.user.username
+
+def create_profile(sender,**kwargs):
+    if kwargs['created']:
+        user_profile =UserProfile.objects.create(user=kwargs['instance'])
+post_save.connect(create_profile,sender=User)
