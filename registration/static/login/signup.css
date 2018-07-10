@@ -9,6 +9,26 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+#background{
+    height: 100vh;
+
+    background-size: cover;
+  }
+  .bg1{
+    background: url('1.jpg');
+  }
+  .bg2{
+    background: url('2.jpg');
+  }
+  .bg3{
+    background: url('3.jpg');
+  }
+  .bg4{
+    background: url('4.jpg');
+  }
+  .bg5{
+    background: url(' 5.jpg');
+  }
 #container{
     width: 50%;
     height: 100%;

@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Signup</title>
         {% load static %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href={% static "login/signup.css"%}>
 		<script>
+			var cnt=1;
+            function change()
+            {
+                console.log(cnt);
+                var root=document.getElementById('background');
+                root.className='bg'+cnt;
+                var render=document.getElementById('render');
+                render.className='bg'+(cnt+1);
+                cnt=(cnt<5)?cnt+1:1;
+            }
+            setInterval(change,5000);
 			function validatepass()
 			{
-				var str=document.getElementById('password');
-				if(str.value=='hi')
+				var str=document.getElementById('password').value;
+				if(str=='hi')
 				{
 					document.getElementById('pfalse').style.visibility="hidden";
 					document.getElementById('ptrue').style.visibility="visible";
@@ -23,30 +34,54 @@
 					
 				}
 			}
+			function validatecpass()
+			{
+				var str=document.getElementById('password').value;
+				var str2=document.getElementById('cpassword').value;
+				if(str==str2)
+				{
+					document.getElementById('cfalse').style.visibility="hidden";
+					document.getElementById('ctrue').style.visibility="visible";
+					
+				}
+				else{
+					document.getElementById('ctrue').style.visibility="hidden";
+					document.getElementById('cfalse').style.visibility="visible";
+					
+				}
+			}
 		</script>
     </head>
     <body >
     {% if form.errors %}
     <h1> {{ form.errors }}</h1>
     {% endif%}
-    {% block content %}
-      <h2>Sign up</h2>
+	{% block content %}
+	<div id="render" class="bg1">
+    <div id="background" class="bg1">
       <div id="container">
+		<h2>Sign up</h2>
       <form id="login" action="" method="post">
         {% csrf_token %}
         <input type="text" id="username" class="in" placeholder="Username" name="username" />
-        <input type="email" id="email" class="in" placeholder="Email" name="email" />
+        <input type="text" id="email" class="in" placeholder="Email" name="email" />
         <div class="inner-addon right-addon">
           <i id="ptrue"class="glyphicon glyphicon-ok"style="color:lightgreen;visibility:hidden"></i>
-          <i id="pfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden"></i>
+          <i id="pfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content"></i>
           <input type="password" id="password"class="in" placeholder="Password" name="password" onchange="validatepass();" onkeypress="validatepass();"/>
-        </div>
-        <input type="password" id="cpassword" class="in" placeholder="Confirm Password" name="cpassword" />
+		</div>
+		<div class="inner-addon right-addon">
+		<i id="ctrue"class="glyphicon glyphicon-ok"style="color:lightgreen;visibility:hidden"></i>
+		<i id="cfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content"></i>
+		<input type="password" id="cpassword" class="in" placeholder="Confirm Password" name="cpassword" onchange="validatecpass();" onkeypress="validatecpass();" />
+		</div>
         <input type="submit" value="Sign Up" class="in submit sub_log"/>
         <br>
         <span><a href="#">Forgot Password?</a></span>
       </form>
-      </div>
+	  </div>
+	</div>
+	</div>
     {% endblock %}
     </body>
 </html>
