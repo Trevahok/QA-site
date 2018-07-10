@@ -19,3 +19,5 @@ class UserProfile(models.Model):
     last_login = models.DateTimeField()
     last_activity_ip = models.GenericIPAddressField()
 
+    def __str__(self):
+        return self.user.username
