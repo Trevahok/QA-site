@@ -1,11 +1,52 @@
-{% if form.errors %}
-<h1> {{ form.errors }}</h1>
-{% endif%}
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-  </form>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href={% static "login/signup.css"%}>
+		<script>
+			function validatepass()
+			{
+				var str=document.getElementById('password');
+				if(str.value=='hi')
+				{
+					document.getElementById('pfalse').style.visibility="hidden";
+					document.getElementById('ptrue').style.visibility="visible";
+					
+				}
+				else{
+					document.getElementById('ptrue').style.visibility="hidden";
+					document.getElementById('pfalse').style.visibility="visible";
+					
+				}
+			}
+		</script>
+    </head>
+    <body >
+    {% if form.errors %}
+    <h1> {{ form.errors }}</h1>
+    {% endif%}
+    {% block content %}
+      <h2>Sign up</h2>
+      <div id="container">
+      <form id="login" action="" method="post">
+        {% csrf_token %}
+        <input type="text" id="username" class="in" placeholder="Username" name="username" />
+        <input type="email" id="email" class="in" placeholder="Email" name="email" />
+        <div class="inner-addon right-addon">
+          <i id="ptrue"class="glyphicon glyphicon-ok"style="color:lightgreen;visibility:hidden"></i>
+          <i id="pfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden"></i>
+          <input type="password" id="password"class="in" placeholder="Password" name="password" onchange="validatepass();" onkeypress="validatepass();"/>
+        </div>
+        <input type="password" id="cpassword" class="in" placeholder="Confirm Password" name="cpassword" />
+        <input type="submit" value="Sign Up" class="in submit sub_log"/>
+        <br>
+        <span><a href="#">Forgot Password?</a></span>
+      </form>
+      </div>
+    {% endblock %}
+    </body>
+</html>
