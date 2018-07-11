@@ -45,21 +45,15 @@ CREATE DATABASE qa;
 ```
 > 7. Migrations
 ```sh
-./manage.py makemigrations
-```
-+ MacOs
-```sh
 python3 manage.py makemigrations
 ```
+
 > 8. Server instructions
 
 ```sh
-./manage.py runserver 
+python3 manage.py runserver 
 ```
-+ MacOs
-```sh
-python3 manage.py runserver
-```
+
 
 > 9. Run in the browser
 + open localhost:8000 in your browser 
