@@ -16,8 +16,7 @@ class UserProfile(models.Model):
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     email_id = models.EmailField(blank=False)
     ph_no = models.CharField(validators=[phone_regex], max_length=17, blank=True)
-    reg_date = models.DateField(blank = False)
-    last_activity_ip = models.GenericIPAddressField()
+    last_activity_ip = models.GenericIPAddressField(default = '0.0.0.0')
 
     def __str__(self):
         return self.user.username
@@ -26,3 +25,5 @@ def create_profile(sender,**kwargs):
     if kwargs['created']:
         user_profile =UserProfile.objects.create(user=kwargs['instance'])
 post_save.connect(create_profile,sender=User)
+
+
