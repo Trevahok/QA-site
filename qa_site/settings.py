@@ -131,3 +131,5 @@ STATIC_URL = '/static/'
 #Login redirect - webpage to enter after login , if next not provided 
 
 LOGIN_REDIRECT_URL = 'home'
+
+

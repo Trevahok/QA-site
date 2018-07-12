@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login
 from .models import UserProfile
+from django.contrib.auth.decorators import login_required
+from .forms import UserProfileForm
 
 # Create your views here.
 def signup(request):
@@ -17,8 +19,13 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
-
+@login_required(login_url='login')
 def profile(request):
-    user_profile = UserProfile.objects.get(user=request.user)
-    return 
+    if request.method =='POST':
+        profile_update_form = UserProfileForm(request.POST)
+        if profile_update_form.is_valid():
+            pass
+    else:
+        user_profile = UserProfile.objects.get(user=request.user)
+        return render(request, 'profile.html', {'profile':user_profile})
 
