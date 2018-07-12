@@ -5,6 +5,7 @@
     <body>
         <p>{{profile.user.username }}</p>
         <form method='POST'>
+            {% csrf_token %}
             <input value={{profile.email_id}} name='email_id'>
             <input value={{profile.gender}} name='gender'>
             <input value={{profile.ph_no}} name='ph_no'>

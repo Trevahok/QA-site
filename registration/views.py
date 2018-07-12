@@ -24,7 +24,7 @@ def profile(request):
     if request.method =='POST':
         profile_update_form = UserProfileForm(request.POST)
         if profile_update_form.is_valid():
-            pass
+        # lot more coming soon 
     else:
         user_profile = UserProfile.objects.get(user=request.user)
         return render(request, 'profile.html', {'profile':user_profile})
