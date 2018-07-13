@@ -19,17 +19,20 @@
         {% csrf_token %}
 
     	{% block content %}
+        {% if form.errors %} 
+        {{ form.errors }}
+        {% endif %}
         <input type="text" id="username" class="in" placeholder="Username" name="username" />
         <input type="text" id="email" class="in" placeholder="Email" name="email" required/>
         <div class="inner-addon right-addon">
           <i id="ptrue"class="glyphicon glyphicon-ok"style="color:lightgreen;visibility:hidden"></i>
           <i id="pfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content"></i>
-          <input type="password" id="password"class="in" placeholder="Password" name="password" onchange="validatepass();" onkeypress="validatepass();"/>
+          <input type="password" id="password"class="in" placeholder="Password" name="password1" onchange="validatepass();" onkeypress="validatepass();"/>
 		</div>
 		<div class="inner-addon right-addon">
 		<i id="ctrue"class="glyphicon glyphicon-ok"style="color:lightgreen;visibility:hidden"></i>
 		<i id="cfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content"></i>
-		<input type="password" id="cpassword" class="in" placeholder="Confirm Password" name="cpassword" onchange="validatecpass();" onkeypress="validatecpass();" />
+		<input type="password" id="cpassword" class="in" placeholder="Confirm Password" name="password2" onchange="validatecpass();" onkeypress="validatecpass();" />
 		</div>
         <input type="submit" value="Sign Up" class="in submit sub_log"/>
         <br>
