@@ -12,16 +12,16 @@ var cnt=1;
 			function validatepass()
 			{
 				var str=document.getElementById('password').value;
-				if(str=='hi')
+				if(str.length>=8)
 				{
 					document.getElementById('pfalse').style.visibility="hidden";
 					document.getElementById('ptrue').style.visibility="visible";
-					
+
 				}
 				else{
 					document.getElementById('ptrue').style.visibility="hidden";
 					document.getElementById('pfalse').style.visibility="visible";
-					
+
 				}
 			}
 			function validatecpass()
@@ -32,11 +32,11 @@ var cnt=1;
 				{
 					document.getElementById('cfalse').style.visibility="hidden";
 					document.getElementById('ctrue').style.visibility="visible";
-					
+
 				}
 				else{
 					document.getElementById('ctrue').style.visibility="hidden";
 					document.getElementById('cfalse').style.visibility="visible";
-					
+
 				}
 			}

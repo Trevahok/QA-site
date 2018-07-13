@@ -1,14 +1,12 @@
 <html>
     <head>
-        <title>{{profile.user.username}}</title>
+        <title>{{request.user.username}}</title>
     </head> 
     <body>
-        <p>{{profile.user.username }}</p>
+        <p>{{request.user.username }}</p>
         <form method='POST'>
             {% csrf_token %}
-            <input value={{profile.email_id}} name='email_id'>
-            <input value={{profile.gender}} name='gender'>
-            <input value={{profile.ph_no}} name='ph_no'>
+                {{ profile }}
             <input type='submit'>
         </form>
     </body>
