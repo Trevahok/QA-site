@@ -1,2 +1,7 @@
-{% if user.is_authenticated %} hello there {% endif%}
+{% if user.is_authenticated %} 
+<p>
+    hello there,{{user.username}}
+    <a href="{% url 'profile' %}?next={{request.path}}">Profile</a>
+</p>
+{% endif %}
 <a href="{% url 'login' %}?next={{request.path}}">Login</a>

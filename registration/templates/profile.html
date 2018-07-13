@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{{request.user.username}}</title>
+    </head> 
+    <body>
+        <p>{{request.user.username }}</p>
+        <form method='POST'>
+            {% csrf_token %}
+                {{ profile }}
+            <input type='submit'>
+        </form>
+    </body>
+</html>

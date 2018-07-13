@@ -10,18 +10,17 @@
 		<script type="text/javascript" src='{% static "login/script.js" %}'></script>
     </head>
     <body >
-    {% if form.errors %}
-    <h1> {{ form.errors }}</h1>
-    {% endif%}
-	{% block content %}
+
 	<div id="render" class="bg1">
     <div id="background" class="bg1">
       <div id="container">
 		<h2>Sign up</h2>
       <form id="login" action="" method="post">
         {% csrf_token %}
+
+    	{% block content %}
         <input type="text" id="username" class="in" placeholder="Username" name="username" />
-        <input type="text" id="email" class="in" placeholder="Email" name="email" />
+        <input type="text" id="email" class="in" placeholder="Email" name="email" required/>
         <div class="inner-addon right-addon">
           <i id="ptrue"class="glyphicon glyphicon-ok"style="color:lightgreen;visibility:hidden"></i>
           <i id="pfalse"class="glyphicon glyphicon-remove"style="color:lightcoral;visibility:hidden" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content"></i>
