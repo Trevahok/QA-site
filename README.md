@@ -1,6 +1,5 @@
 # qa-website
-A new quora and stack overflow competitor based on django
-
+    A Question-Answer site with added features of blogging and Faculty Polling to facilitate interactions between Seniors and Juniors of an institution.
 
 ## Instructions
 > 1. Create a development 
