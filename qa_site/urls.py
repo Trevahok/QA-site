@@ -19,8 +19,10 @@ from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from . import views
 import registration.urls
+import polls.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/',include(registration.urls)),
     path('home/',views.home,name= 'home'),
+    path('faculty/',include(polls.urls)),
 ]
