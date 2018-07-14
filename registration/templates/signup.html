@@ -8,6 +8,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href={% static "login/signup.css"%}>
 		<script type="text/javascript" src='{% static "login/script.js" %}'></script>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
     </head>
     <body >
 
@@ -19,7 +20,7 @@
         {% csrf_token %}
 
     	{% block content %}
-        {% if form.errors %} 
+        {% if form.errors %}
         {{ form.errors }}
         {% endif %}
         <input type="text" id="username" class="in" placeholder="Username" name="username" />

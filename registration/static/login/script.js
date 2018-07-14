@@ -1,5 +1,5 @@
 var cnt=1;
-      function change()
+      async function change()
       {
           console.log(cnt);
           var root=document.getElementById('background');
