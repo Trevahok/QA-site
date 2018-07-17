@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'qa',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -122,8 +122,8 @@ USE_L10N = True
 USE_TZ = True
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-print(PROJECT_DIR)
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 

@@ -1,3 +1,5 @@
+{% extends "header.html" %}
+{% block content %}
 {% if user.is_authenticated %}
 <p>
     hello there,{{user.username}}
@@ -6,3 +8,4 @@
 {% endif %}
 <a href="{% url 'login' %}?next={{request.path}}">Login</a>
 <a href =" {% url 'logout' %}"> Logout </a>
+{% endblock %}
