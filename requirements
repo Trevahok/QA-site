@@ -2,3 +2,4 @@ django
 mysqlclient
 Pillow
 mysql
+sqlite3

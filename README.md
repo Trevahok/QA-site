@@ -56,3 +56,4 @@ python3 manage.py runserver
 
 > 9. Run in the browser
 + open localhost:8000 in your browser 
+sqlite3

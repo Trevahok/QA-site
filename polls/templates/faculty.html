@@ -5,7 +5,9 @@
     <body>
         <h1>
             wait is this real ?
-            {{ f.name }}
+            {% for fac in f %} 
+            <p>{{fac.name}}</p>
+            {% endfor %}
         </h1>
         
     </body>
