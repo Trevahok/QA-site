@@ -27,5 +27,6 @@ def profile(request):
     profile_update_form = UserProfileForm(request.POST or None,instance=instance)
     if profile_update_form.is_valid():
         profile_update_form.save()
-    return render(request, 'profile.html', {'profile':profile_update_form})
+    return render(request, 'profile.html', {'profile':profile_update_form,'details':instance})
+
 

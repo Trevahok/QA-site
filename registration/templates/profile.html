@@ -1,13 +1,36 @@
+{% extends "header.html" %}
+{% load static %}
+<!--<!DOCTYPE html>
 <html>
     <head>
-        <title>{{request.user.username}}</title>
+        <title>About me</title>
+        {% include "header.html" %}
     </head> 
     <body>
-        <p>{{request.user.username }}</p>
+        {% block header-nav %}{% endblock %}
+        <!--<p>{{request.user.username }}</p>
         <form method='POST'>
             {% csrf_token %}
                 {{ profile }}
             <input type='submit'>
         </form>
+
+
+        <form method="POST">
+
+        </form>
     </body>
 </html>
+-->
+{% block page_style %}
+<style>
+
+</style>
+{% endblock %}
+{% block user_profile %}
+    <img id="profile" src="{{details.dp.url}}">    
+    <canvas class="modular"></canvas>
+{% endblock %}
+{% block content %}
+
+{% endblock %}

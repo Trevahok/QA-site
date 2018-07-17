@@ -17,7 +17,7 @@ class UserProfile(models.Model):
     email_id = models.EmailField(blank=False)
     ph_no = models.CharField(validators=[phone_regex], max_length=17, blank=True)
     last_activity_ip = models.GenericIPAddressField(default = '0.0.0.0')
-
+    dp=models.ImageField(blank=True,null=True)
     def __str__(self):
         return self.user.username
 

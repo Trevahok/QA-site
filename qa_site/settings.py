@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'qa',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -132,5 +132,9 @@ STATIC_URL = '/static/'
 #Login redirect - webpage to enter after login , if next not provided 
 
 LOGIN_REDIRECT_URL = 'home'
+
+
+MEDIA_ROOT='media'
+MEDIA_URL='/media/'
 
 
