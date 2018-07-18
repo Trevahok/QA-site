@@ -9,6 +9,7 @@
                        connectParticles: true,
                        color:['#fefefe']
                    });
+                   document.getElementById('id_gender').className="form-control";
                    };
 </script>
 {% endblock %}
@@ -26,6 +27,9 @@
         top:20%;
         left:45%;
     }
+    #id_gender{
+        width:10%;
+    }
 </style>
 {% endblock %}
 
@@ -39,9 +43,19 @@
 
 {% block content %}
     <p>{{request.user.username }}</p>
-    <form method='POST' enctype="multipart/form-data">
+    <form method='POST' enctype="multipart/form-data" class="form-group">
         {% csrf_token %}
-            {{ profile }}
-        <input type='submit'>
+        {% for field in profile %}
+        <div class="form-group has-errors text-danger small">
+            {{field.errors}}
+        </div>
+        <div class="form-group has-errors text-danger small">
+        </div>
+        <div class="form-group">
+            {{field}}
+        </div>
+        {% endfor %}
+        
+        <input type='submit' value='Update' class="btn btn-success">
     </form>
 {% endblock %}
