@@ -7,6 +7,5 @@ class UserProfileForm(ModelForm):
         model = UserProfile
         exclude = [ 'last_activity_ip','user' ]
         fields='__all__'
-    gender = forms.CharField(widget=forms.Select,choices=GENDER_CHOICES)
 
 # when size of what is being tracked abt the user increases , switch exclude and fields  
