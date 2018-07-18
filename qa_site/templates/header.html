@@ -37,12 +37,19 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
+                                {% if user.is_authenticated %}
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{request.user.username}} 
-                                <img id="user_icon" src="{{details.dp.url}}"></a>
+                                <img id="user_icon" src="{{details.dp.url}}">
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{% url 'profile' %}?next={{request.path}}"><span class="glyphicon glyphicon-user"></span> About Me </a></li>
                                     <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
                                 </ul>
+                                {% else %}
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Not Logged In  
+                                    <img id="user_icon" src="{{MEDIA_URL}}/default.png">
+                                </a>
+                                {% endif %}
                             </li>
                         
                     </ul>
