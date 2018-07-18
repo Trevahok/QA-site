@@ -1,0 +1,126 @@
+Prof.Thanikaiselvan V,Associate Professor  & HoD,Intercom:2437
+Prof.Ramachandra Reddy,Senior Professor,Intercom: 2423
+Prof.Jasmine Pemeena Priyadarsini. M,Professor,Intercom:2415
+Prof.Malay Kumar Hota,Professor,Intercom:
+Prof.Shambavi K,Professor,Intercom:2448
+Prof.Valarmathi J,Professor,Intercom:2426
+Prof.Abhijit Bhowmick,Associate Professor,Intercom:
+Prof.Anand S,Associate Professor,Intercom:2413
+Prof.Budhaditya Bhattacharyya,Associate Professor ,Intercom:2438
+Prof.Christopher Clement J,Associate Professor ,Intercom:2489
+Prof.Gautam Narayan,Associate Professor ,Intercom:
+Prof.Hariharan S,Associate Professor ,Intercom:2486
+Prof.Jabeena A  ,Associate Professor,Intercom:2436
+Prof.Kalaivani S,Associate Professor,Intercom:2372
+Prof.Kalapraveen Bagadi,Associate Professor,Intercom:2435
+Prof.Kishore V.Krishnan,Associate Professor ,Intercom:2486
+Prof.Poonkuzhali R,Associate Professor,Intercom:2429
+Prof.Rajesh A,Associate Professor,Intercom:2433
+Prof.Rajesh Kumar M,Associate Professor,Intercom:2435
+Prof.Ravindra Dhuli,Associate Professor,Intercom:2427
+Prof.Renuga Devi S,Associate Professor,Intercom:2424
+Prof.Revathi S  ,Associate Professor,Intercom:2425
+Prof.Sanjay Kumar Singh  ,Associate Professor,Intercom:
+Prof.Shankar T  ,Associate Professor,Intercom:2413
+Prof.Srinivasa Rao Inabathini,Associate Professor,Intercom:2436
+Prof.Sudhakar M S,Associate Professor,Intercom:2485
+Prof.Vaegae Naveen Kumar,Associate Professor,Intercom:2495
+Prof.Vijay Kumar,Associate Professor,Intercom:2429
+Prof.Vinoth Babu K,Associate Professor,Intercom:2488
+Prof.Yogesh Kumar Choukiker,Associate Professor,Intercom:2429
+Prof.Aarthi G,Assistant Professor (Selection Grade),Intercom:2436
+Prof.Kavitha K V N,Assistant Professor (Selection Grade),Intercom:2413
+Prof.Rajesh R,Assistant Professor (Selection Grade),Intercom:2372
+Prof.Sangeetha A,Assistant Professor (Selection Grade),Intercom:2425
+Prof.Christina Josephine Malathi A,Assistant Professor (Senior),Intercom:2495
+Prof.Gopi Ram,Assistant Professor (Senior),Intercom:
+Prof.Lavanya. N,Assistant Professor (Senior),Intercom:2487
+Prof.Preetha K S,Assistant Professor (Senior),Intercom:2437
+Prof.Rajalakshmi S,Assistant Professor (Senior),Intercom:2413
+Prof.Rajeshkumar V,Assistant Professor (Senior),Intercom:2488
+Prof.Sankar Ganesh S ,Assistant Professor (Senior),Intercom:2495
+Prof.Yepuganti Karuna,Assistant Professor (Senior),Intercom:2438
+Prof.Ashish P,Assistant Professor ,Intercom:2489
+Prof.Lokanath M,Assistant Professor ,Intercom:2372
+Prof.S. Ramya ,Assistant Professor ,Intercom:2773
+Prof.Saranya K C,Assistant Professor ,Intercom:2773
+Prof.Subhabharathi S,Assistant Professor ,Intercom:2372
+Prof.Irene G,Assistant Professor (Jr) ,Intercom:2433
+Prof.Saranya D,Assistant Professor (Jr) ,Intercom:2435
+Prof.Naga Raju Challa,Assistant Professor (Jr) ,Intercom:2435
+Prof.Sindhu B,Assistant Professor (Jr) ,Intercom:2495
+Prof. Maryjo M George,Assistant Professor (Jr) ,Intercom:2495
+Prof.Prabhakaran N,Assistant Professor (Jr) ,Intercom:2485
+Prof.Raman Kumar  M,Assistant Professor (Jr) ,Intercom:2495
+Prof.Shaik Vahida,Assistant Professor (Jr) ,Intercom:2429
+Prof.Srividhya V,Assistant Professor (Jr) ,Intercom:2428
+Prof.Suresh Kumar M,Assistant Professor (Jr) ,Intercom:2429
+Prof. Arunachalam V,Associate Professor & HoD,Intercom:2427
+Prof. Arunachalam V,Associate Professor & HoD,Intercom:2427
+Prof.Kittur Harish Mallikarjun ,Professor,Intercom:2349
+Prof.John Reuben P,Associate Professor,Intercom:
+Prof.Kumaravel S,Associate Professor,Intercom:2485
+Prof.Ramakrishnan V N,Associate Professor,Intercom:2372
+Prof.Sakthivel .R,Associate Professor,Intercom:2413
+Prof.Sivanantham S,Asso. Prof. & Asst. Director-AR,Intercom:2436
+Prof.Sivasankaran K,Associate Professor,Intercom:2490
+Prof.Sradhibhatla Sridevi,Associate Professor,Intercom:2435
+Prof.Ravi S,Assistant Professor (Selection Grade),Intercom:2878
+Prof.Anitha R,Assistant Professor (Senior),Intercom:
+Prof.Dhanabal R,Assistant Professor (Senior),Intercom:2741
+Prof.Jagannadha Naidu K,Assistant Professor (Senior),Intercom:2419
+Prof.Jayakrishnan P,Assistant Professor (Senior),Intercom:2439
+Prof. Nithishkumar V		 ,Assistant Professor (Senior) ,Intercom:
+Prof. Pradheep T	 ,Assistant Professor (Senior) ,Intercom:
+Prof.Ragunath G,Assistant Professor (Senior),Intercom:2489
+Prof.Rajeev Pankaj Nelapati,Assistant Professor (Senior),Intercom:2489
+Prof.Satheeshkumar S,Assistant Professor (Senior),Intercom:2718
+Prof.Aarthy M ,Assistant Professor ,Intercom:2489
+Prof.Prayline Rajabai C,Assistant Professor ,Intercom:2489
+Prof. Killadi Baboji,Assistant Professor (Jr),Intercom:2439
+Prof.Arun M,Associate Professor  & HoD,Intercom:2725
+Prof.Alex Noel Joseph Raj,Professor,Intercom:-
+Prof.Saravanan K,Professor,Intercom:2422
+Prof.Gerardine Immaculate Mary ,Associate Professor ,Intercom:2459
+Prof.Nandakumar S,Associate Professor,Intercom:2428
+Prof.Sasikumar P ,Associate Professor ,Intercom:2413
+Prof.Noor Mohammed V,Associate Professor,Intercom:2428
+Prof.Velmurugan T,Associate Professor,Intercom:2428
+Prof.Karthikeyan B,Assistant Professor (Selection Grade),Intercom:2726
+Prof.Sundar S,Assistant Professor (Selection Grade),Intercom:2726
+Prof.Bagubali A,Assistant Professor (Senior),Intercom:2486
+Prof.Karthikeyan A,Assistant Professor (Senior),Intercom:2486
+Prof.Padmini T N,Assistant Professor (Senior),Intercom:2435
+Prof.Ravi Kumar C V,Assistant Professor (Senior) ,Intercom:2489
+Prof.Sangeetha N,Assistant Professor (Senior),Intercom:2425
+Prof.Shanmugasundaram M,Assistant Professor (Senior),Intercom:2487
+Prof.Venugopal P,Assistant Professor (Senior),Intercom:2467
+Prof.Vidhyapathy C M,Assistant Professor (Senior),Intercom:2726
+Prof.Chitra P,Assistant Professor ,Intercom:2726
+Prof.Deepika Rani Sona,Assistant Professor ,Intercom:2486
+Prof.Sirisha Mrunalini L N,Assistant Professor (Jr) ,Intercom:2429
+Prof.Sivacoumar R,Associate Professor  & HoD,Intercom:2787
+Prof.Sivacoumar R,Associate Professor  & HoD,Intercom:2787
+Prof. Zachariah C Alex,Senior Professor & Director (Sponsored Research),Intercom:2401
+Prof. Elizabeth Rufus,Professor & Dean,Intercom:2410
+Prof.Bhaskar Mohan Murari,Associate Professor,Intercom:2509
+Prof.Deepa Madathil,Associate Professor,Intercom:2584
+Prof.Dharani Bai G,Associate Professor,Intercom:2398
+Prof.Jeeva  J.B,Associate Professor,Intercom:2586
+Prof.Kathirvelan J,Associate Professor,Intercom:2368
+Prof.Mythili A,Associate Professor,Intercom:2589
+Prof.Sathya P,Associate Professor ,Intercom:2368
+Prof.T.R. Suresh Kumar,Associate Professor
+Prof.Govardhan K,Assistant Professor (Selection Grade),Intercom:2486
+Prof.Prakash R,Assistant Professor (Selection Grade),Intercom:2369
+Prof.Vidhya  S,Assistant Professor (Selection Grade),Intercom:2586
+Prof.Debashis Maji,Assistant Professor (Senior),Intercom:
+Prof.Muthuraja S,Assistant Professor (Senior),Intercom:2488
+Prof.Sasikumar  K,Assistant Professor (Senior),Intercom:2586
+Prof.Sharmila  N	,Assistant Professor (Senior),Intercom:2487
+Prof.Subhathirai S P	,Assistant Professor (Senior),Intercom:2486
+Prof.Sumit Kumar Jindal,Assistant Professor (Senior),,Intercom:
+Prof.Abraham Sampson S,Assistant Professor,,Intercom:
+Prof. Prasanth A,Assistant Professor (Jr),,Intercom:2464
+Prof. Aditya  A.L.G.N. ,Assistant Professor(Jr),,Intercom:2787
+Prof. Shaik Riyaz Ali,Assistant Professor(Jr),,Intercom:2787

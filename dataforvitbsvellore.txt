@@ -1,0 +1,19 @@
+Dr.Sudarsanam S K,Professor
+Dr. Reeves Wesley J,Professor
+Dr. Venkatesh R,Professor
+Dr.Gopinathan N,Associate Professor
+Dr.Hari Krishnan  K,Associate Professor
+Dr.Shankar  G,Associate Professor
+Prof. Balaji J,Asst. Prof. (SG)
+Dr. Angeline Gautami Fernando,Asst. Prof. (Sr.)
+Dr.Anuradha A,Asst. Prof. (Sr.)
+Prof. Joseph Jeya Anand  S,Asst. Prof. (Sr.)
+Prof. Saju B,Asst. Prof. (Sr.)
+Prof. Sankary  V,Asst. Prof. (Sr.)
+Dr.Raja Rajeswari,Asst. Professor
+Dr. Aruna R,Asst. Professor
+Prof. Deepa  D,Asst. Professor
+Dr.Sharon Sophia,Asst. Professor
+Prof.Nitya Rani B,Asst. Prof. (Jr.)
+Dr. Sudha S,Assistant Professor
+Dr. Vaidhyanatha Balaji KV,Assistant Professor

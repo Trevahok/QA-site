@@ -1,0 +1,197 @@
+Prof.Manju S L,Associate Professor & HOD,Intercom:2341
+Prof. Buvaneswari G,Senior Professor,Intercom:2338
+Prof. Sathiyanarayanan K,Senior Professor & Registrar,Intercom:2040 / 2801
+Prof. Senthil Kumar A,Senior Professor ,Intercom:2754
+Prof. Akella Sivaramakrishna,Professor,Intercom:2337
+Prof. Vijayaraghavan R,Senior Professor & Dean ,Intercom:2460\2602
+Prof. Badal Kumar Mandal,Professor,Intercom:2339
+Prof. Himaja M,Professor,Intercom:2330
+Prof. Mary Saral A,Professor & Assistant Director, Students’ Welfare,Intercom:2359
+Prof. Nawaz Khan F,Professor,Intercom:2334
+Prof.Palanisami N,Professor,Intercom:2451 / 2452
+Prof.  Sheela A,Professor,Intercom:2341
+Prof. Pundlik Rambhau Bhagat,Professor,Intercom:2473
+Prof. Rajagopal D,Professor,Intercom:2884
+Prof. Sivakumar A,Professor,Intercom:2339
+Prof. Sriraghavan K,Professor
+Prof. Vijaya Krishna Kari,Professor & Asst. Director-RAAC,Intercom:2334
+Prof. Vijayakumar V,Professor,Intercom: 2535
+Prof. Anand Prabu A,Associate Professor,Intercom:2335
+Prof. Ashok Kumar S K,Associate Professor
+Prof. Cheralathan K K,Associate Professor,Intercom:2553
+Prof. Ethiraj K R,Associate Professor,Intercom:2451
+Prof.  Jianping Hu,Associate Professor,Intercom:
+Prof. Karpagam S,Associate Professor,Intercom:2334
+Prof. Madhvesh Pathak,Associate Professor,Intercom:2553
+Prof. Manju S L,Associate Professor,Intercom:2440
+Prof. Napoleon A A,Associate Professor,Intercom:2335
+Prof. Prabhakaran D,Associate Professor
+Prof. Rajasekhara Reddy Sabbasani,Associate Professor,Intercom:2740
+Prof. Sarveswari S,Associate Professor,Intercom:2334
+Prof. Sasikumar S,Associate Professor & Assistant Director, Students' Welfare,Intercom:2959 / 2960
+Prof.Shivashankar M,Associate Professor ,Intercom:2335
+Prof.Thirumanavelan G,Associate Professor ,Intercom:2334
+Prof. Akhila Maheswari M,Assistant Professor (Senior)
+Prof. Asharani I V,Assistant Professor (Senior),Intercom:2452
+Prof. Kannadasan S,Assistant Professor (Senior),Intercom:2358
+Prof. Mohana Roopan S,Assistant Professor (Senior),Intercom:2352
+Prof. Ravikanth Kamlekar,Assistant Professor (Senior)
+Prof. Sai Saraswathi V,Assistant Professor (Senior),Intercom:
+Prof. Sangeetha D,Assistant Professor (Senior),Intercom:2334
+Prof. Sangeetha P,Assistant Professor (Senior),Intercom:2553
+Prof. Santhakumar K,Assistant Professor (Senior),Intercom:2489
+Prof. Satish Kumar G,Assistant Professor (Senior)
+Prof. Senthilkumar S,Assistant Professor (Senior),Intercom:2449
+Prof. Sovan Roy ,Assistant Professor (Senior)
+Prof. Sumathi S,Assistant Professor (Senior),Intercom:2334
+Prof. Suseem S R,Assistant Professor (Senior),Intercom:2331
+Prof.Thenmozhi K,Assistant Professor (Senior),Intercom:2449
+Prof. Thirumoorthy K,Assistant Professor (Senior),Intercom:2524
+Prof.Veera Venkata Ramesh E,Assistant Professor (Senior)
+Prof. Vijayalakshmi U ,Assistant Professor (Senior),Intercom:2342
+Prof.Vijayanand C,Assistant Professor (Senior)
+Prof. Barnali Maiti,Assistant Professor
+Prof. Kaushik Chanda,Assistant Professor
+Prof. Madhumitha G,Assistant Professor,Intercom:2352
+Prof. Priyankar Paira,Assistant Professor,Intercom:2553
+Prof.Roopa Kenoth ,Research Scientist (under DST),Intercom:
+Prof.Saravanakumar D,Research Scientist (under DST),Intercom:
+Prof.Ashaparna Mondal,Assistant Professor (Junior)
+Prof.Badma Priya D,Assistant Professor (Junior)
+Prof.Elakkiya C,Assistant Professor (Junior)
+Prof.Senthil Kumar V,Assistant Professor (Junior)
+Prof.Shanthi S,Assistant Professor (Junior)
+Prof. Senthilnathan K,Professor & HOD,Intercom:2442
+Prof. Chidambaram K,Senior Professor & Director, VIT Community Radio & STARS Scheme,Intercom:2323 / 2773
+Prof. James Jebaseelan Samuel E,Senior Professor,Intercom:2416
+Prof. Kalainathan S,Senior Professor & Director, Centre for Crystal Growth,Intercom:2350
+Prof. Veluraja K,Senior Professor,Intercom:2451
+Prof. Arunai Nambiraj N,Professor,Intercom:2839
+Prof. Ezhil Vizhi R,Professor,Intercom:2358 / 2957
+Prof. Girish Mukundrao Joshi,Professor,Intercom:2727
+Prof. Malathi M,Professor,Intercom:2453
+Prof. Rajan Babu D,Professor,Intercom:2804
+Prof. Ramasubramanian V,Professor ,Intercom:
+Prof. Ramesh Babu P,Professor & Dean (Academic Research),Intercom:2344
+Prof. Ruban Kumar A,Professor, Assistant Director, Students' Welfare & Professor & Professor in­charge of Physical Education Department,Intercom:2356
+Prof.Senthilnathan K,Professor,Intercom:2442
+Prof. Subramaniam C K,Professor
+Prof.Anu Radha C,Associate Professor,Intercom:2451
+Prof.Ramesh M Thamankar ,Associate Professor
+Prof.Sathya Swaroop N R ,Associate Professor,Intercom:2351
+Prof. Dhritiman Gupta,Assistant Professor (Senior)
+Prof.Krishnamoorthi C,Assistant Professor (Senior),Intercom:2352
+Prof. Madeswaran S,Assistant Professor (Senior),Intercom:2451
+Prof. Madhuri W,Assistant Professor (Senior),Intercom: 2956 / 2356
+Prof. Ravi Shanker Babu,Assistant Professor (Senior) &  NCC Officer,Intercom:2553 / 2828
+Prof. Shaik Kaleemulla,Assistant Professor (Senior),Intercom:2355
+Prof. Shobana M K,Assistant Professor (Senior)
+Prof. Ummal Momeen M,Assistant Professor (Senior)
+Prof. Vijaya Chamundeeswari S P,Assistant Professor (Senior),Intercom:2352
+Prof. Balakrishnan S,Assistant Professor
+Prof. Eithiraj R D,Assistant Professor,Intercom:2451
+Prof. Krishna Chandar N,Assistant Professor,Intercom:2958
+Prof. Murali R,Assistant Professor,Intercom:2451
+Prof. Samir Ranjan Meher,Assistant Professor,Intercom:2609
+Prof. Senthur Pandi R,Assistant Professor,Intercom:2609
+Prof.Suresh Kumar Vadrangi,Assistant Professor
+Prof.Tarun Garg,Assistant Professor
+Prof. Uma Mahendra Kumar K,Assistant Professor
+Prof. Usha Rani M,Assistant Professor,Intercom:2334
+Prof.Krishnakanth R,Assistant Professor (Junior)
+Prof.Noormohammad Shareef  S,Assistant Professor (Junior)
+Prof.Surya Mallick,Assistant Professor (Junior)
+Prof.Chaitanya Kumar K,Assistant Professor (Junior)
+Prof. Rushi Kumar B,Associate Professor & HoD,Intercom:2718
+Prof. Chandrasekaran V M,Senior Professor,Intercom:2325
+Prof.Murugusundaramoorthy G,Senior Professor,Intercom:
+Prof. Pandian P,Senior Professor
+Prof.Selvakumar R,Senior Professor,Intercom:2755
+Prof. Abdul Hameed W,Professor
+Prof.Anjaneyulu G S G N,Professor,Intercom:2708
+Prof. Gargi Chakraborty,Professor,Intercom:2553
+Prof. Hemant Kumar Nashine,Professor,Intercom:
+Prof.Natarajan G,Professor,Intercom:2460
+Prof.Phaneendra T,Professor
+Prof.Thamizharasi Tamizhmani,Professor
+Prof.Vallampati Ramachandra Prasad,Professor
+Prof.Vijaya K,Professor,Intercom:2894
+Prof.Akella V S N Murty,Associate Professor
+Prof.Gopalakrishna Gadiyar H,Associate Professor,Intercom:2822
+Prof. Indhira K,Associate Professor,Intercom:2325
+Prof.Jagadeesh Kumar M S,Associate Professor
+Prof.Karthikeyan K,Associate Professor
+Prof. Padma R,Associate Professor,Intercom:2822
+Prof. Rajendran P,Associate Professor
+Prof. Rushi Kumar B,Associate Professor,Intercom:2718
+Prof.Uma K,Associate Professor,Intercom:
+Prof.Yamuna M,Associate Professor,Intercom:
+Prof. Anuradha D,Assistant Professor (Senior),Intercom:2748
+Prof.Bala Anki Reddy Pol,Assistant Professor (Senior)
+Prof.Biju  V,Assistant Professor (Senior)
+Prof.Ezhilmaran D,Assistant Professor (Senior)
+Prof. Hemadri Reddy Reganti,Assistant Professor (Senior)
+Prof.  Jagatheswari S,Assistant Professor (Senior),Intercom:
+Prof.Kaspar S,Assistant Professor (Senior),Intercom:2748
+Prof. Khadar Babu S K ,Assistant Professor (Senior),Intercom:2707
+Prof.Lakshminarayana P,Assistant Professor (Senior),Intercom:
+Prof. Mellacheruvu Naga Srinivasu,Assistant Professor (Senior)
+Prof. Naga Satya Srinivas Akkiraju,Assistant Professor (Senior),Intercom:2822
+Prof. Nageshwar Rao Ragi,Assistant Professor (Senior)
+Prof.Niranjan Hari ,Assistant Professor (Senior)
+Prof. Peri Kameswara Kameswaran,Assistant Professor (Senior)
+Prof. Raja Das,Assistant Professor (Senior),Intercom:2741
+Prof.Ravi Sankar J,Assistant Professor (Senior),Intercom:
+Prof.Saravanarajan M C,Assistant Professor (Senior),Intercom:
+Prof.Sharief Basha S,Assistant Professor (Senior),Intercom:
+Prof. Sivaraj R,Assistant Professor (Senior),Intercom:2470
+Prof.Sri Rama Varaprasad Bhuvanagiri,Assistant Professor (Senior)
+Prof.Thilagavathi K,Assistant Professor (Senior),Intercom:
+Prof. Venkata Satyanarayana P,Assistant Professor (Senior)
+Prof. Venkateswarlu B,Assistant Professor (Senior)
+Prof. Vijayakumar A G,Assistant Professor (Senior)
+Prof. Aruna K,Assistant Professor,Intercom:2748
+Prof.Balaji S,Assistant Professor
+Prof.Deepa G,Assistant Professor
+Prof.Dinesh Kumar  S,Assistant Professor
+Prof.Easwaramoorthy D,Assistant Professor
+Prof.Gowrisankar  A,Assistant Professor
+Prof. Jayalakshmi M,Assistant Professor,Intercom:2748
+Prof.Kalaivani K,Assistant Professor
+Prof. Kalpana Priya D,Assistant Professor,Intercom:2748
+Prof. Kavitha A,Assistant Professor
+Prof. Kavitha K,Assistant Professor,Intercom:2749
+Prof. Madhu V,Assistant Professor
+Prof.Madhusudhan Reddy K,Assistant Professor
+Prof. Manimaran A,Assistant Professor
+Prof. Mokesh Rayalu G,Assistant Professor
+Prof.Monica C,Assistant Professor
+Prof. Mubashir Unnissa M,Assistant Professor
+Prof.Mythili G Y,Assistant Professor
+Prof.Nalliah M,Assistant Professor,Intercom:
+Prof. Nandhini S,Assistant Professor,Intercom:
+Prof. Om P Suthar,Assistant Professor,Intercom:2749
+Prof. Palanivel K,Assistant Professor
+Prof.Poornima T,Assistant Professor
+Prof.Praveen T,Assistant Professor
+Prof. Purusotham S,Assistant Professor
+Prof. Raghavendar K,Assistant Professor
+Prof.Rajasekaran G,Assistant Professor
+Prof. Roy S,Assistant Professor
+Prof. Shobana Devi N,Assistant Professor ,Intercom:2748
+Prof. Subramanyam Reddy A,Assistant Professor
+Prof.Sujatha V ,Assistant Professor
+Prof. Tamizharasi R,Assistant Professor
+Prof. Venkataramana  B,Assistant Professor
+Prof. Yogalakshmi T,Assistant Professor
+Prof.  Gowsalya M,Assistant Professor
+Prof.  Lakshmi Narayan Mishra,Assistant Professor
+Prof. Govindaraj V,Assistant Professor
+Prof.  Ashish Kumar Prasad,Assistant Professor
+Prof. Moumita Mandal,Assistant Professor
+Prof. Ramesh Kumar D,Assistant Professor
+Prof. Sivanesan M,Assistant Professor
+Prof.Jagadesh Kumar K,Assistant Professor (Junior)
+Prof.Karthika K,Assistant Professor (Junior)
+Prof.Muthukumaran V,Assistant Professor (Junior)
+Prof.Yuvarani S,Assistant Professor (Junior)
