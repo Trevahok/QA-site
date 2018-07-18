@@ -24,7 +24,7 @@ def signup(request):
 @login_required(login_url='login')
 def profile(request):
     instance = get_object_or_404(UserProfile,user= request.user)
-    profile_update_form = UserProfileForm(request.POST or None,request.FILES,instance=instance)
+    profile_update_form = UserProfileForm(request.POST or None,request.FILES or None,instance=instance)
     if profile_update_form.is_valid():
         profile_update_form.save()
     return render(request, 'profile.html', {'profile':profile_update_form,'details':instance})
