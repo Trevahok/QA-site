@@ -36,7 +36,9 @@
                     <!--<li><a href="#">Page 2</a></li>-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% url 'profile' %}?next={{request.path}}">{{request.user.username}} <img id="user_icon" src="{{details.dp.url}}"></a></li>
+                        <li><a href="{% url 'profile' %}?next={{request.path}}">{{request.user.username}} 
+                            <img id="user_icon" src="{{details.dp.url}}">
+                        </a></li>
                     </ul>
                 </div>
                 </div>
