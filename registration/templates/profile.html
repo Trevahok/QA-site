@@ -39,7 +39,7 @@
 
 {% block content %}
     <p>{{request.user.username }}</p>
-    <form method='POST'>
+    <form method='POST' enctype="multipart/form-data">
         {% csrf_token %}
             {{ profile }}
         <input type='submit'>
