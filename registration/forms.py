@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import UserProfile,GENDER_CHOICES
+from .models import UserProfile
 from django import forms
 
 class UserProfileForm(ModelForm):
