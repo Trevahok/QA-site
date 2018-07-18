@@ -24,6 +24,10 @@ class Faculty(models.Model):
             (4, 'four'),
             (5, 'five'),
             )
+    v_or_c_choices = (
+            ('v', 'vellore'),
+            ('c', 'chennai'),
+            )
     dp = models.ImageField(upload_to='facultydps',blank=True)
     name = models.CharField(default = '', max_length=50)
     post = models.CharField(default = '' , max_length=50)     # postiton like sr.professor or associate prof. etc.
@@ -31,6 +35,7 @@ class Faculty(models.Model):
     likes = models.PositiveSmallIntegerField(default =0 )
     dislikes = models.PositiveSmallIntegerField(default=0)
     rating = models.PositiveSmallIntegerField(default = 0 , choices= star_choices)
+    v_or_c = models.CharField(max_length=1,blank=False, choices= v_or_c_choices,default='c')
 
 
     def __str__(self):
