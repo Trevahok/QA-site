@@ -24,7 +24,7 @@ class Faculty(models.Model):
             (4, 'four'),
             (5, 'five'),
             )
-    pic = models.ImageField(blank=True)
+    dp = models.ImageField(upload_to='facultydps',blank=True)
     name = models.CharField(default = '', max_length=50)
     post = models.CharField(default = '' , max_length=50)     # postiton like sr.professor or associate prof. etc.
     dept = models.CharField(default = '' , max_length=7, choices=dept_choices)
