@@ -5,21 +5,17 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.js"></script>
         <style>
-            #profile{
-                height:200px;
-                width:200px;
-                border-radius:50%; 
-                position: absolute;
-                top:20%;
-                left:45%;
-            }
+            
             #user_icon{
                 height:30px;
                 width:30px;
                 border-radius: 50%;
             }
         </style>
+        {% block page_scripts %}
+        {% endblock %}
         {% block page_style %}
         {% endblock %}
     </head>
@@ -40,12 +36,12 @@
                     <!--<li><a href="#">Page 2</a></li>-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        {% if details.dp %}
                         <li><a href="{% url 'profile' %}?next={{request.path}}">{{request.user.username}} <img id="user_icon" src="{{details.dp.url}}"></a></li>
-                        {% endif %}
                     </ul>
                 </div>
                 </div>
+                {% block post_nav %}
+                {% endblock %}
         </nav>
         
         <div id="content-container">

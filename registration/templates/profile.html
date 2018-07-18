@@ -1,23 +1,40 @@
 {% extends "header.html" %}
 {% load static %}
-{% include "header.html" %}
-{% block header-nav %}{% endblock %}
 
+{% block page_scripts %}
+<script>
+    window.onload = function() {
+                   Particles.init({
+                       selector: '.modular',
+                       connectParticles: true,
+                       color:['#fefefe']
+                   });
+                   };
+</script>
+{% endblock %}
 {% block page_style %}
 <style>
-
+    #profile_cont{
+        width:100%;
+        height:400px;
+    }
+    #profile{
+        height:200px;
+        width:200px;
+        border-radius:50%; 
+        position: absolute;
+        top:20%;
+        left:45%;
+    }
 </style>
 {% endblock %}
 
-{% block user_profile %}
-    
-    {% if details.dp %}
-    <img id="profile" src="{{details.dp.url}}">    
-    {% else %}
-    <img id="profile" src="{% url 'default.png' %}">    
-    {% endif %}
 
+{% block post_nav %}
+    <div id="profile_cont">
+    <img id="profile" src="{{details.dp.url}}">    
     <canvas class="modular"></canvas>
+    </div>
 {% endblock %}
 
 {% block content %}
