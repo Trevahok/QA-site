@@ -1,22 +1,65 @@
 {% extends 'header.html' %}
+{% block page_style %}
+<style>
+        div.single_holder {
+            border: 0.5px solid #ccc;
+        }
+        
+        div.single_holder:hover {
+            border: 0.5px solid #777;
+        }
+        
+        div.single_holder img {
+            width: 100%;
+            height: auto;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .holder {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+            padding-top: 10px;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .holder {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .holder {
+                width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+</style>
+{% endblock %}
+
+{% block page_scripts %}
+{% endblock %}
+
+
 {% block content %}
-    {% for fac in f %} 
-    <div class = 'w3-container' > 
-    <div class="responsive">
-
-          <div class="gallery">
-
-                    <img src = '{{MEDIA_URL}}/default.png' width = '5' height='5'>
-                    <div class = 'desc' >
-                        {{fac.name}}<br>
-                        {{fac.post}}
-                        
-                    </div>
-          </div>
+{% for fac in f %}
+<div class="holder">
+    <div class="single_holder">
+    <img src="{{MEDIA_URL}}/default.png" width="100" height="100">
+    <label>{{fac.name}}</label>
+    <br>
+    {{fac.post}}
     </div>
-    {% endfor %}
     </div>
+{% endfor %}
 <div class="clearfix"></div>
-
-
 {% endblock %}
