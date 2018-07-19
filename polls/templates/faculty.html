@@ -1,15 +1,22 @@
-<html>
-    <head>
-        <title>Faculty review page</title>
-    </head>
-    <body>
-        <h1>
-            wait is this real ?
-            {% for fac in f %} 
-            <h5>{{fac.name}}</h5>
-            <h6>{{fac.post}}</h6>
-            {% endfor %}
-        </h1>
-        
-    </body>
-</html>
+{% extends 'header.html' %}
+{% block content %}
+    {% for fac in f %} 
+    <div class = 'w3-container' > 
+    <div class="responsive">
+
+          <div class="gallery">
+
+                    <img src = '{{MEDIA_URL}}/default.png' width = '5' height='5'>
+                    <div class = 'desc' >
+                        {{fac.name}}<br>
+                        {{fac.post}}
+                        
+                    </div>
+          </div>
+    </div>
+    {% endfor %}
+    </div>
+<div class="clearfix"></div>
+
+
+{% endblock %}
