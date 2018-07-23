@@ -1,12 +1,7 @@
 from django.db import models
 
 # Create your models here.
-
-class Faculty(models.Model):
-    class Meta:
-        verbose_name_plural = 'Faculties'
-
-    dept_choices = (
+dept_choices = (
             ('sas','School of Advanced Sciences'),
             ('scse','School of Computing Science and Engineering'),
             ('select', 'School of Electrical Engineering '),
@@ -16,6 +11,12 @@ class Faculty(models.Model):
             ('vitsol', 'VIT School of Law'),
             ('vfit','VIT Fashion Institute of Technology')
             )
+dept_choices_list=[x[0].upper for x in dept_choices]
+class Faculty(models.Model):
+    class Meta:
+        verbose_name_plural = 'Faculties'
+
+    
 
     star_choices = (
             (1, 'one'),

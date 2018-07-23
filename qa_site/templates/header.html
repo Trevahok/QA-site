@@ -33,6 +33,15 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                     <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculties
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {% for school in schools %}
+                            <li><a href="/faculty/{{school.lower}}">{{school}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
                     <!--href="{% url 'profile' %}?next={{request.path}}"-->
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -46,7 +55,7 @@
                                     <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
                                 </ul>
                                 {% else %}
-                                <a class="dropdown-toggle"  href="{% url 'login' %}">Not Logged In  
+                                <a class="dropdown-toggle"  href="{% url 'login' %}">Log In
                                     <img id="user_icon" src="{{MEDIA_URL}}/default.png">
                                 </a>
                                 {% endif %}
@@ -55,10 +64,10 @@
                     </ul>
                 </div>
                 </div>
+                
                 {% block post_nav %}
                 {% endblock %}
         </nav>
-        
         <div id="content-container">
         {% block content %}
         {% endblock %}

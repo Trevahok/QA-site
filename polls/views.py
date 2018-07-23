@@ -7,4 +7,5 @@ from .models import Faculty
 def test(request,department='scse'):
     instance =get_list_or_404(Faculty, dept = department)
     instance.sort(key=lambda i: i.post)
-    return render(request,'faculty.html',{'f' : instance}) 
+    print(instance[0].name)
+    return render(request,'faculty.html',{'f' : instance,'len':len(instance)}) 
