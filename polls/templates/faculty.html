@@ -10,7 +10,7 @@
         }
         
         div.single_holder img {
-            width: 100%;
+            width: 20%;
             height: auto;
         }
         
@@ -47,13 +47,18 @@
 {% endblock %}
 
 {% block page_scripts %}
+<script>
+
+</script>
 {% endblock %}
 
 
 {% block content %}
 {% for fac in f %}
-<div class="holder">
-    <div class="single_holder">
+<div class="holder" onclick="location.href='/faculty/{{fac.dept}}/{{fac.name}}/'">
+    {#{"location.href='/faculty/{{fac.dept}}/{{fac.name}}/'"}#}
+    {#console.log('{{fac.name}}')#}
+    <div class="single_holder" >
     <img src="{{MEDIA_URL}}/default.png" width="100" height="100">
     <label>{{fac.name}}</label>
     <br>
