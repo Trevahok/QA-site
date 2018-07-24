@@ -5,4 +5,6 @@ def faculties_var(request):
 def user_var(request):
     if request.user.is_authenticated:
         instance = UserProfile.objects.get(user= request.user)
+    else:
+        instance=None
     return {'details':instance}
