@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'qa_site.context_processors.faculties_var',
+                'qa_site.context_processors.user_var',
             ],
         },
     },
