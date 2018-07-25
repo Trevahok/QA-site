@@ -25,7 +25,7 @@ class Faculty(models.Model):
             (4, 'four'),
             (5, 'five'),
             )
-    v_or_c_choices = (
+    campus_choices= (
             ('v', 'vellore'),
             ('c', 'chennai'),
             )
@@ -36,7 +36,7 @@ class Faculty(models.Model):
     likes = models.PositiveSmallIntegerField(default =0 )
     dislikes = models.PositiveSmallIntegerField(default=0)
     rating = models.PositiveSmallIntegerField(default = 0 , choices= star_choices)
-    v_or_c = models.CharField(max_length=1,blank=False, choices= v_or_c_choices,default='c')
+    campus = models.CharField(max_length=1,blank=False, choices= campus_choices,default='c')
 
 
     def __str__(self):

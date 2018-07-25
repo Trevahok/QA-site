@@ -10,9 +10,8 @@ def test(request,department='scse'):
     instance.sort(key=lambda i: i.post)
     print(instance[0].name)
     return render(request,'faculty.html',{'f' : instance,'len':len(instance)}) 
-def fac_profile(request,department,name):
-    print(department,name)
-    instance = get_object_or_404(Faculty,dept=department,name= name)
+def fac_profile(request,department,pk):
+    instance = get_object_or_404(Faculty,dept=department,id= pk)
     profile_update_form = FacultyProfileForm(request.POST or None,request.FILES or None,instance=instance)
     if profile_update_form.is_valid():
         profile_update_form.save()
