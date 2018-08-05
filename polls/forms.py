@@ -5,5 +5,5 @@ from django import forms
 class FacultyProfileForm(ModelForm):
     class Meta:
         model = Faculty
-        exclude = []
-        fields='__all__'
+        exclude = '__all__'
+        fields=['rating' , 'likes']

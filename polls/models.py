@@ -15,9 +15,6 @@ dept_choices_list=[x[0].upper for x in dept_choices]
 class Faculty(models.Model):
     class Meta:
         verbose_name_plural = 'Faculties'
-
-    
-
     star_choices = (
             (1, 'one'),
             (2, 'two'),

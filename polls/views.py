@@ -15,4 +15,4 @@ def fac_profile(request,department,pk):
     profile_update_form = FacultyProfileForm(request.POST or None,request.FILES or None,instance=instance)
     if profile_update_form.is_valid():
         profile_update_form.save()
-    return render(request, 'faculty_profile.html', {'profile':profile_update_form})
+    return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance})

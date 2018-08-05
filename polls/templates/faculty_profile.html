@@ -1,4 +1,19 @@
 {% extends 'header.html' %}
 {% block content %}
-    {{profile}}
+{% if profile.dp %}
+<img src='{{profile.dp.url}}'>
+{% else %}
+<img src = '{{MEDIA_URL}}/default.png' height = 60 width = 60>
+{% endif %}
+    {{profile.name}}
+    <br>
+    {{profile.post}}
+    <br>
+    <label for = 'likes'>Likes:</label>
+    {{profile.likes}}
+    <br>
+    <label for='rating'>Rating:    </label>
+    {{profile.rating}}
+    <br>
+<p> comments will start appearing here</p>
 {% endblock %}
