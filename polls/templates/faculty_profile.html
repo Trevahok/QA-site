@@ -1,4 +1,5 @@
 {% extends 'header.html' %}
+{% load comments %}
 {% block content %}
 {% if profile.dp %}
 <img src='{{profile.dp.url}}'>
@@ -15,5 +16,13 @@
     <label for='rating'>Rating:    </label>
     {{profile.rating}}
     <br>
-<p> comments will start appearing here</p>
+    <label for='campus'>Campus:    </label>
+    {{profile.get_campus_display}}
+    <br>
+    {% get_comment_count for profile as comment_count %} {{ comment_count }}</p>
+       <p>List of comments :</p>
+       {% render_comment_list for profile %}
+    </p>
+
+    {% render_comment_form for profile %}
 {% endblock %}

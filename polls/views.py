@@ -8,7 +8,6 @@ from .forms import FacultyProfileForm
 def test(request,department='scse'):
     instance =get_list_or_404(Faculty, dept = department)
     instance.sort(key=lambda i: i.post)
-    print(instance[0].name)
     return render(request,'faculty.html',{'f' : instance,'len':len(instance)}) 
 def fac_profile(request,department,pk):
     instance = get_object_or_404(Faculty,dept=department,id= pk)

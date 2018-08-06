@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_comments',
     'qa_site',
     'registration',
     'polls'
@@ -138,4 +140,5 @@ LOGIN_REDIRECT_URL = 'home'
 MEDIA_ROOT='media'
 MEDIA_URL='/media/'
 
-
+# for enabling the comments modules in the sites sub-framework
+SITE_ID=2

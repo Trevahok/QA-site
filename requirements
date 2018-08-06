@@ -3,3 +3,4 @@ mysqlclient
 Pillow
 mysql
 sqlite3
+django-contrib-comments

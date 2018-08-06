@@ -18,8 +18,9 @@ from django.urls import path,include
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
-from . import views
 from .settings import MEDIA_ROOT,MEDIA_URL
+
+from . import views
 import registration.urls
 import polls.urls
 urlpatterns = [
@@ -27,4 +28,5 @@ urlpatterns = [
     path('user/',include(registration.urls)),
     path('home/',views.home,name= 'home'),
     path('faculty/',include(polls.urls)),
+    url('comments/',include('django_comments.urls')),
 ]+static(MEDIA_URL,document_root=MEDIA_ROOT)
