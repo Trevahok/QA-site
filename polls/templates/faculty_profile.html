@@ -1,28 +1,48 @@
 {% extends 'header.html' %}
 {% load comments %}
 {% block content %}
-{% if profile.dp %}
-<img src='{{profile.dp.url}}'>
-{% else %}
-<img src = '{{MEDIA_URL}}/default.png' height = 60 width = 60>
-{% endif %}
-    {{profile.name}}
+   <center>
+    <div class='w3-card'>
+        {% if profile.dp %}
+        <img src='{{profile.dp.url}}'>
+        {% else %}
+        <img src = '{{MEDIA_URL}}/default.png' height = 60 width = 60>
+        {% endif %}
+        {{profile.name}}
+        <br>
+        {{profile.post}}
+        <br>
+        <label for = 'likes'>Likes:</label>
+        {{profile.likes}}
+        <br>
+        <label for='rating'>Rating:    </label>
+        {{profile.rating}}
+        <br>
+        <label for='campus'>Campus:    </label>
+        {{profile.get_campus_display}}
+        <br>
+    </div>
     <br>
-    {{profile.post}}
-    <br>
-    <label for = 'likes'>Likes:</label>
-    {{profile.likes}}
-    <br>
-    <label for='rating'>Rating:    </label>
-    {{profile.rating}}
-    <br>
-    <label for='campus'>Campus:    </label>
-    {{profile.get_campus_display}}
-    <br>
-    {% get_comment_count for profile as comment_count %} {{ comment_count }}</p>
-       <p>List of comments :</p>
-       {% render_comment_list for profile %}
-    </p>
-
-    {% render_comment_form for profile %}
+    <div class = 'w3-card'>
+        <br>
+        {% if user.is_authenticated %}
+        {% render_comment_form for profile %}
+        {% else %}
+        <p>Login to be able to comment.</p>
+        {% endif %}
+        <br>
+    </div>
+        {% get_comment_count for profile as comment_count %}
+        <br>
+        <p>No. of comments: {{ comment_count }}</p>
+       {% get_comment_list for profile as comlist %}
+   {% for comment in comlist %}
+        <div class = 'w3-card w3-black' style ="width: 80%;">
+            <p>{{comment.user_name}} says : </p>
+           <p>{{comment.comment}}</p>
+        </div>
+       
+   </center>
+   {% endfor %}
+        
 {% endblock %}
