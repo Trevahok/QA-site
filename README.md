@@ -20,40 +20,19 @@ deactivate
 ```sh
 pip install -r requirements.txt
 ```
-> 5. Configure mysql
 
-+ Debian
-```sh
-sudo apt-get install python-pip python-dev libmysqlclient-dev
-```
-+ MacOs
-```sh
-brew install mysql
-mysql -u root -p
-```
-```sql
-```
-> 6. Create a database
-
-```sh
-mysql -u {%username%} -p
-```
-
-```sql
-CREATE DATABASE qa;
-```
-> 7. Migrations
+> 5. Migrations
 ```sh
 python3 manage.py makemigrations
 ```
 
-> 8. Server instructions
+> 6. Server instructions
 
 ```sh
 python3 manage.py runserver 
 ```
 
 
-> 9. Run in the browser
+> 7. Run in the browser
 + open localhost:8000 in your browser 
 sqlite3
