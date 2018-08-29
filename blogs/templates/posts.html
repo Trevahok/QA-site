@@ -1,0 +1,33 @@
+{% extends 'header.html' %}
+{% load comments %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<center>
+    <p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ blogform.as_p }}
+            <input type = 'submit' value='create'>
+        </form>
+    </p> 
+{% else %}
+<p> Login to Post</p>
+{% endif %}
+    <br>
+
+{% for post in posts %}
+    <div class = 'w3-card' style ='width: 87% ;'>
+        <p> {{post.user.username }}</p>
+        <p> {{post.event_name }}</p>
+        <p>{{ post.description }}</p>
+        <p>{{ post.pub_date }}</p>
+
+    </div>
+    <div class = 'w3-card' style ='width: 87% ;'>
+        {% render_comment_list for post %}
+    </div>
+{% endfor %}
+</center>
+
+{% endblock %}

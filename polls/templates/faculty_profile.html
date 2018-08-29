@@ -1,4 +1,18 @@
 {% extends 'header.html' %}
+{% block page_scripts %}
+<script>
+  var modal = document.getElementById('myModal');
+  var img = document.getElementById('profile');
+  img.onclick = function(){
+    modal.style.display = "block";
+  }
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  };
+</script>
+{% endblock %}
 {% load comments %}
 {% block content %}
    <center>
@@ -41,8 +55,8 @@
             <p>{{comment.user_name}} says : </p>
            <p>{{comment.comment}}</p>
         </div>
-       
+
    </center>
    {% endfor %}
-        
+
 {% endblock %}

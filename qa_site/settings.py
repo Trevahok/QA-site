@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django_comments',
     'qa_site',
     'registration',
-    'polls'
+    'polls',
+    'blogs'
 ]
 
 MIDDLEWARE = [
@@ -117,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -142,3 +143,6 @@ MEDIA_URL='/media/'
 
 # for enabling the comments modules in the sites sub-framework
 SITE_ID=2
+
+# for comments app
+
