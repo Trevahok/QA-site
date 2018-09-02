@@ -13,6 +13,10 @@
   };
 </script>
 {% endblock %}
+
+{% block page_style %}
+      <link rel = "stylesheet" href = "https://www.w3schools.com/lib/w3.css">
+{% endblock %}
 {% load comments %}
 {% block content %}
    <center>
@@ -46,17 +50,16 @@
         {% endif %}
         <br>
     </div>
-        {% get_comment_count for profile as comment_count %}
+    {% get_comment_count for profile as comment_count  %}
         <br>
         <p>No. of comments: {{ comment_count }}</p>
        {% get_comment_list for profile as comlist %}
    {% for comment in comlist %}
-        <div class = 'w3-card w3-black' style ="width: 80%;">
-            <p>{{comment.user_name}} says : </p>
+        <div class = 'w3-card w3-green' style ="width: 80%;">
+            <p>{{comment.name}} says : </p>
            <p>{{comment.comment}}</p>
         </div>
-
-   </center>
    {% endfor %}
 
+   </center>
 {% endblock %}
