@@ -1,6 +1,0 @@
-django ==2.0.7
-mysqlclient
-Pillow
-mysql
-sqlite3
-django-contrib-comments
