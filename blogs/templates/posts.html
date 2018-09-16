@@ -2,27 +2,35 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css"> {% endblock %} {% block content %}
 
-<div class='w3-flat-midnight-blue w3-container'>
+<div class='w3-container'>
 
-    <div id='form' class='w3-card-4 w3-margin w3-center w3-teal w3-topbar w3-border-blue' style='padding-top:16px'>
+    <div id='form' class='w3-card-4 w3-center 'style='padding-top:16px'>
         {% if user.is_authenticated %}
         <form method="POST">
-            {% csrf_token %} {{ blogform.as_p }}
-            <input type='submit' value='create' class='w3-button w3-block w3-flat-belize-hole'>
+            {% csrf_token %} {% for field in blogform %}
+            <div class="w3-quarter w3-padding ">
+                {{field.label_tag}}
+            </div>
+            <div class="w3-threequarter m5 w3-padding">
+                {{ field}}
+            </div>
+            {% endfor %}
+            <input type='submit' value='create' class='w3-button w3-block w3-flat-belize-hole w3-hover-blue'>
         </form>
         {% else %}
-        <p> Login to Post</p>
+        <div class='w3-panel'> Login to Post </div>
         {% endif %}
 
     </div>
-    <div id='posts' class='w3-container'>
+    <div id='posts' class='w3-container w3-row-padding'>
         <ul class="w3-ul w3-card-4 w3-round w3-margin">
             {% for post in posts %}
-            <li class="w3-display-container w3-padding-medium w3-margin">{{post.user.username}} <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-topright">&times;</span>
-                <p> {{post.event_name }}</p>
-                <p>{{ post.description }}</p>
-                <p>{{ post.pub_date }}</p>
-                <p>Event Type: {{ post.get_type_display| title}}</p>
+            <li class="w3-display-container w3-half "><span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-topright w3-hover-blue">&times;</span>
+            {{post.event_name}}
+               {{ post.description }}
+               {{ post.pub_date }}
+               Event Type: {{ post.get_type_display| title}}
+               {{post.user.username}}
             </li>
             {% endfor %}
         </ul>
