@@ -1,4 +1,3 @@
-polls/__pycache__/*
 media/*
-qa_site/__pycache__/*
-registration/__pycache__/*
+**/__pycache__/*
+**/.DS_Store
