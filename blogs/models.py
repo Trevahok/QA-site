@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 def get_sentinel_user():
     return User.objects.get_or_create(username='deleted_user')[0]
 class Post(models.Model):
-    type_choices = ( ('i', 'informal') , ('f', 'formal'))
+    type_choices = ( ('i', 'Informal') , ('f', 'Formal'))
     user = models.ForeignKey(User, on_delete = models.SET(get_sentinel_user))
     event_name = models.CharField(max_length = 40, blank = True)
     description = models.TextField(max_length = 150)

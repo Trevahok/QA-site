@@ -1,39 +1,43 @@
 {% extends 'header.html' %} {% load comments %} {% block page_scripts %}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css"> {% endblock %} {% block content %}
-
-<div class='w3-container'>
-
-    <div id='form' class='w3-card-4 w3-center 'style='padding-top:16px'>
-        {% if user.is_authenticated %}
-        <form method="POST">
-            {% csrf_token %} {% for field in blogform %}
-            <div class="w3-quarter w3-padding ">
-                {{field.label_tag}}
+<div class="w3-container">
+    {% if user.is_authenticated %}
+    <div class="w3-row-padding w3-small">
+        <div class="w3-card-4">
+            <div class="w3-container w3-padding">
+                <form method="POST">
+                    {% csrf_token %} {% for field in blogform %}
+                    <div class="w3-col s3 l3">
+                        {{field.label_tag}}
+                    </div>
+                    <div class="w3-col s9 l9">
+                        {{ field}}
+                    </div>
+                    {% endfor %}
             </div>
-            <div class="w3-threequarter m5 w3-padding">
-                {{ field}}
+            <input type='submit' value='create' class='w3-btn w3-green' style='width:100%'>
+            </form>
+            {% else %}
+            <div class="w3-text-wide">
+                Login to Post
             </div>
-            {% endfor %}
-            <input type='submit' value='create' class='w3-button w3-block w3-flat-belize-hole w3-hover-blue'>
-        </form>
-        {% else %}
-        <div class='w3-panel'> Login to Post </div>
-        {% endif %}
-
+            {% endif %}
+        </div>
     </div>
-    <div id='posts' class='w3-container w3-row-padding'>
-        <ul class="w3-ul w3-card-4 w3-round w3-margin">
-            {% for post in posts %}
-            <li class="w3-display-container w3-half "><span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-topright w3-hover-blue">&times;</span>
-            {{post.event_name}}
-               {{ post.description }}
-               {{ post.pub_date }}
-               Event Type: {{ post.get_type_display| title}}
-               {{post.user.username}}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <br>
+    <ul class="w3-ul s12 l6" >
+        {% for post in posts %}
+        <li class="w3-card w3-quarter" style='margin-bottom=8px;'>
+            <div class=" w3-green w3-center">
+                {{post.event_name | title}}
+            </div>
+                {{ post.description }}
+                Event Type: {{ post.get_type_display| title}}
+                    {{post.user.username}}
+                    {{ post.pub_date }}
+            <br>
+        </li>
+        {% endfor %}
 </div>
 {% endblock %}
