@@ -16,7 +16,8 @@
                     </div>
                     {% endfor %}
             </div>
-            <input type='submit' value='create' class='w3-btn w3-green' style='width:100%'>
+            <button type='submit' value='Create' class='w3-btn w3-blue-grey' style='width:100%'><i class=' fa fa-send '></i>
+                Create Event</button>
             </form>
             {% else %}
             <div class="w3-text-wide">
@@ -26,16 +27,16 @@
         </div>
     </div>
     <br>
-    <ul class="w3-ul s12 l6" >
+    <ul class="w3-ul s12 l6">
         {% for post in posts %}
-        <li class="w3-card w3-quarter" style='margin-bottom=8px;'>
-            <div class=" w3-green w3-center">
+        <li class="w3-card w3-half" style='margin-bottom=8px;'>
+            <div class=" w3-blue-grey w3-center">
                 {{post.event_name | title}}
             </div>
-                {{ post.description }}
-                Event Type: {{ post.get_type_display| title}}
-                    {{post.user.username}}
-                    {{ post.pub_date }}
+            {{ post.description }}
+            Event Type: {{ post.get_type_display| title}}
+            {{post.user.username}}
+            {{ post.pub_date }}
             <br>
         </li>
         {% endfor %}
