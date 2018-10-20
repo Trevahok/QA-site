@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'qa_site',
     'registration',
     'polls',
-    'blogs'
+    'blogs',
+    'forums',
 ]
 
 MIDDLEWARE = [

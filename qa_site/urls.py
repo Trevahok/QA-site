@@ -31,4 +31,5 @@ urlpatterns = [
     path('faculty/',include(polls.urls)),
     url('comments/',include('django_comments.urls')),
     url('events/',include('blogs.urls')),
+    url('forums/', include('forums.urls'))
 ]+static(MEDIA_URL,document_root=MEDIA_ROOT)
