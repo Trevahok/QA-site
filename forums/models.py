@@ -7,9 +7,13 @@ class Question(models.Model):
     text = models.CharField(blank=False, max_length=1000)
     created = models.DateTimeField(auto_now_add=True, editable=False)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='questions')
+    upvotes = models.PositiveSmallIntegerField(default=0)
+    modified = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ('-created',)
+    def __str__(self):
+        return self.text.title()  + ' by ' + self.user.username.title()
 
 
 class Answer(models.Model):
@@ -22,3 +26,5 @@ class Answer(models.Model):
 
     class Meta:
         ordering = ('-created','modified')
+    def __str__(self):
+        return self.text.title() + ' by ' + self.user.username.title()

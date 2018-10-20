@@ -1,0 +1,48 @@
+{% extends 'header.html' %}
+{% block page_scripts %}
+<script>
+    // Accordion
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+{% endblock page_scripts %}
+
+{% block content %}
+<div class="w3-container ">
+    {% for question in questions %}
+    <div class="w3-col " >
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+
+            <span class="w3-right w3-opacity">{{question.modified}}</span>
+            <h4>{{question.text | title}}</h4>
+            <hr class="w3-clear">
+            <p class='w3-right w3-opacity'>{{question.user.username}}</p>
+
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>&nbsp;
+                {{question.upvotes}}</button>
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>&nbsp;
+                Comments</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -3,9 +3,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
         <style>
             #user_icon{
                 height:30px;
@@ -27,22 +30,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="#">VIT</a>
+                    <a class="navbar-brand" href="{% url 'home'%}"><i class ='fa fa-home' ></i>  VPortal </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculties
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user"></i> 
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             {% for school in schools %}
-                            <li><a href="/faculty/{{school.lower}}">{{school}}</a></li>
+                            <li><a href="/faculty/{{school.lower}}"> {{school}}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
                     <!--href="{% url 'profile' %}?next={{request.path}}"-->
-                    <li class="active"><a href="{% url 'events' %}">Events</a></li>
+                    <li class="active"><a href="{% url 'events' %}"> <i class="fa fa-calendar "></i> </a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
@@ -68,7 +70,7 @@
                 {% block post_nav %}
                 {% endblock %}
         </nav>
-        <div id="content-container">
+        <div id="w3-container">
         {% block content %}
         {% endblock %}
         </div>
