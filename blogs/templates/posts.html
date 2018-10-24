@@ -29,15 +29,22 @@
     <br>
     <ul class="w3-ul s12 l6">
         {% for post in posts %}
-        <li class="w3-card w3-half" style='margin-bottom=8px;'>
-            <div class=" w3-blue-grey w3-center">
-                {{post.event_name | title}}
-            </div>
-            {{ post.description }}
-            Event Type: {{ post.get_type_display| title}}
-            {{post.user.username}}
-            {{ post.pub_date }}
-            <br>
+        <li class="w3-card w3-half" style='padding:0; padding-right:5px;'>
+            <ul class="w3-ul">
+                <div class=" w3-blue-grey w3-center">
+                    {{post.event_name | title}}
+                </div>
+                <li>
+                     <label for="event_type" class="w3-small"> Description:</label>    {{ post.description }}
+                </li>
+                <li>
+                    <label for="event_type" class="w3-small"> Event Type: </label> &nbsp;{{ post.get_type_display| title}}
+                </li>
+                <li class='w3-right w3-opacity'>
+                    {{post.user.username}} @
+                    {{ post.pub_date }}
+                </li>
+            </ul>
         </li>
         {% endfor %}
 </div>

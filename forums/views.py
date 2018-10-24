@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from . import models
-
+from .models import Question
+from .forms import QuestionForm
 # Create your views here.
 
 def top_questions(request):
-    questions =models.Question.objects.all()
-    return render(request, 'question_list.html', context= {'questions': questions})
+    questions =Question.objects.all()
+    form = QuestionForm(request.POST or None)
+    if form.is_valid():
+        temp = form.save(commit=False)
+        temp.user = request.user
+        temp.save()
+    return render(request, 'question_list.html', context= {'questions': questions, 'form': form})

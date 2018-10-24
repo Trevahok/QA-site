@@ -1,68 +1,69 @@
 {% extends 'header.html' %}
 {% block page_style %}
 <style>
-        div.single_holder {
-            border: 0.5px solid #ccc;
-        }
-        
-        div.single_holder:hover {
-            border: 2px solid #777;
-        }
-        
-        div.single_holder img {
-            width: 20%;
-            height: auto;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
+    div.single_holder {
+        border: 0.5px solid #ccc;
+    }
+
+    div.single_holder:hover {
+        border: 2px solid #777;
+    }
+
+    div.single_holder img {
+        width: 20%;
+        height: auto;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .holder {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+        padding-top: 10px;
+    }
+
+    @media only screen and (max-width: 700px) {
         .holder {
-            padding: 0 6px;
-            float: left;
-            width: 24.99999%;
-            padding-top: 10px;
+            width: 49.99999%;
+            margin: 6px 0;
         }
-        
-        @media only screen and (max-width: 700px) {
-            .holder {
-                width: 49.99999%;
-                margin: 6px 0;
-            }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .holder {
+            width: 100%;
         }
-        
-        @media only screen and (max-width: 500px) {
-            .holder {
-                width: 100%;
-            }
-        }
-        
-        .clearfix:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+    }
+
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 </style>
 {% endblock %}
 
 {% block page_scripts %}
 <script>
-
 </script>
 {% endblock %}
 
 
 {% block content %}
-{% for fac in f %}
-<div class="holder" onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'">
-    <div class="single_holder" >
-    <img src="{{MEDIA_URL}}/default.png" width=100 height=100>
-    <label>{{fac.name}}</label>
-    <br>
-    {{fac.post}}
-    </div>
-    </div>
-{% endfor %}
+<ul class="w3-ul ">
+    {% for fac in f %}
+
+    <li class=" w3-quarter l3 m4 s12 w3-card-2 " onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'" style='margin-top:3px;'>
+        <img src="{{MEDIA_URL}}/default.png" width=50 height=50>
+        <h5 class='w3-small'>{{fac.name}}</h5>
+        <h6 class="w3-small">
+            {{fac.post}}
+        </h6>
+    </li>
+    {% endfor %}
+</ul>
 <div class="clearfix"></div>
 {% endblock %}

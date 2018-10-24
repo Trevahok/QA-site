@@ -26,7 +26,7 @@ import polls.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/',include(registration.urls)),
-    path('home/',views.home,name= 'home'),
+    path('',views.home,name= 'home'),
     path('faculty/',include(polls.urls)),
     url('comments/',include('django_comments.urls')),
     url('events/',include('blogs.urls')),

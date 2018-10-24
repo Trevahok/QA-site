@@ -11,7 +11,7 @@ class Question(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ('-created','modified', 'upvotes')
     def __str__(self):
         return self.text.title()  + ' by ' + self.user.username.title()
 
