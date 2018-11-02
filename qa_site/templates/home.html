@@ -1,10 +1,31 @@
 {% extends "header.html" %}
 {% block content %}
-{% if user.is_authenticated %}
-<h1>
-    hello there,{{user.username}}
+<div class="w3-container ">
+    <div class="w3-col m10">
+    {% for question in top_questions %}
+        <div class="w3-container w3-card w3-white w3-round w3-margin" onclick="location.href= '{% url 'forums' %}' "><br>
+            <span class="w3-right w3-opacity">{{question.modified}}</span>
+            <h4>{{question.text | title}}</h4>
+            <hr class="w3-clear">
+            <p class='w3-right w3-opacity'>{{question.user.username}}</p>
 
-</h1>
-{% endif %}
-
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>&nbsp;
+                {{question.upvotes}}</button>
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>&nbsp;
+                Comments</button>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="w3-col m2">
+    <h5 class="w3-opacity w3-center">Upcoming events:</h5>
+    <div class="w3-card w3-round w3-white w3-center">
+      <div class="w3-container">
+        <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+        <p><strong>Holiday</strong></p>
+        <p>Friday 15:00</p>
+        <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+      </div>
+    </div>
+    <br>
+</div>
 {% endblock %}

@@ -12,6 +12,7 @@ class Question(models.Model):
 
     class Meta:
         ordering = ('-created','modified', 'upvotes')
+        get_latest_by = 'modified'
     def __str__(self):
         return self.text.title()  + ' by ' + self.user.username.title()
 
@@ -26,5 +27,6 @@ class Answer(models.Model):
 
     class Meta:
         ordering = ('-created','modified')
+        get_latest_by = 'modified'
     def __str__(self):
         return self.text.title() + ' by ' + self.user.username.title()
