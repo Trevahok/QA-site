@@ -5,7 +5,7 @@
 <style>
 input.submit-post, input.submit-preview{
     width:49%;
-    border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+    border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:#ffff;background-color:#4f6a79;text-align:center;cursor:pointer;white-space:nowrap;
 }
 
 </style>
@@ -80,12 +80,12 @@ input.submit-post, input.submit-preview{
             <div style='display:none;'>
                 
                 <hr>
-                <div class="w3-containter">
-                    {%render_comment_form for question%}
+                <div class="w3-containter w3-animate-zoom" >
+                    {% render_comment_list for question%} 
                 </div>
                 <hr>
-                <div class="w3-containter" >
-                    {% render_comment_list for question%} 
+                <div class="w3-containter w3-animate-zoom" style='padding-bottom:0'>
+                    {%render_comment_form for question%}
                 </div>
             </div>
         </div>

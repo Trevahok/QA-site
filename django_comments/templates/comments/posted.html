@@ -1,3 +1,12 @@
-{% extends "comments/base.html" %} {% load i18n %} {% block title %}{% trans "Thanks for commenting" %}.{% endblock %} {% block content %}
-<h1>{% trans "Thank you for your comment" %}.</h1>
-<a href="{% url 'home' %}"> Return back home </a> {% endblock %}
+{% extends "header.html" %} {% load i18n %} {% block content %}
+
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <img src="https://www.lupusuk.org.uk/wp-content/uploads/2018/03/Green-Tick-PNG-Picture.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+    <h4>Your response has been recorded ! Thank You !</h4><br>
+    <hr class="w3-clear">
+    <a href="{% url 'home' %}">
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-home"></i>  Return Home </button>
+
+    </a>
+</div>
+{% endblock %}

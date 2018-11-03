@@ -3,7 +3,7 @@
 
 {% block page_scripts %}
 <script>
-		window.onload = function() {
+	window.onload = function() {
 									 Particles.init({
 											 selector: '.modular',
 											 connectParticles: true,
@@ -23,7 +23,7 @@
 {% endblock %}
 {% block page_style %}
 <style>
-		body{
+	body{
 				overflow-x: hidden;
 		}
 		#profile_cont{
@@ -168,62 +168,64 @@
 
 
 {% block post_nav %}
-		<div id="profile_cont">
-		<img id="profile" src="{{details.dp.url}}" >
-		<h1 id="name">{{request.user.username}}</h1>    
-		<canvas class="modular"></canvas>
-		</div>
-		<div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<div class="modal-content">
-					<img id="dp_upload" src="{{details.dp.url}}" >
-				<form method='POST' enctype="multipart/form-data" class="form-group">
-					{% csrf_token %}
-					<div style="display:none">{{profile}}</div>
-					{{profile.dp}}
-					<input type='submit' value='Update' class="btn btn-success">
-				</form>
-			</div>
-		</div>
+<div id="profile_cont">
+	<img id="profile" src="{{details.dp.url}}">
+	<h1 id="name">{{request.user.username}}</h1>
+	<canvas class="modular"></canvas>
+</div>
+<div id="myModal" class="modal w3-container">
+	<span class="close">&times;</span>
+	<div class="modal-content">
+		<img id="dp_upload" src="{{details.dp.url}}">
+		<form method='POST' enctype="multipart/form-data" class="form-group">
+			{% csrf_token %}
+			<div style="display:none">{{profile}}</div>
+			{{profile.dp}}
+			<input type='submit' value='Update' class="btn btn-success">
+		</form>
+	</div>
+</div>
 {% endblock %}
 
+
 {% block content %}
-		<form method='POST' enctype="multipart/form-data" class="form-group">
-				{% csrf_token %}
-				<div class="row">
-								<div class="col-25">
-									<label for="fname">First Name</label>
-								</div>
-								<div class="col-75">
-									<input type="text" id="fname" name="firstname" placeholder="Name"value="{{request.user.username}}">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-25">
-									<label for="ph_no">Phone number</label>
-								</div>
-								<div class="col-75">
-									{{profile.ph_no}}
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-25">
-									<label for="country">Gender</label>
-								</div>
-								<div class="col-75">
-									{{profile.gender}}
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-25">
-									<label for="subject">About me</label>
-								</div>
-								<div class="col-75">
-									{{profile.desc}}
-								</div>
-							</div>
-							<div class="row">     
-								<input type='submit' value='Update' class="btn btn-success">
-						</div>
-		</form>
+<form method='POST' enctype="multipart/form-data" class="form-group w3-container" style='padding:30px;'>
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-25">
+			<label for="fname">First Name</label>
+		</div>
+		<div class="col-75">
+			<input type="text" id="fname" name="firstname" placeholder="Name" value="{{request.user.username}}">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-25">
+			<label for="ph_no">Phone number</label>
+		</div>
+		<div class="col-75">
+			{{profile.ph_no}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-25">
+			<label for="country">Gender</label>
+		</div>
+		<div class="col-75">
+			{{profile.gender}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-25">
+			<label for="subject">About me</label>
+		</div>
+		<div class="col-75">
+			{{profile.desc}}
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<input type='submit' value='Update' class="w3-btn" style='width:100%;'>
+	</div>
+</form>
 {% endblock %}

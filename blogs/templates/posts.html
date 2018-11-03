@@ -26,6 +26,7 @@
         </div>
     </div>
     <br>
+    {% if posts %}
     <ul class="w3-ul s12 l6">
         {% for post in posts %}
         <li class="w3-card w3-half" style='padding:0; padding-right:9px;margin-bottom:15px;'>
@@ -46,5 +47,16 @@
             </ul>
         </li>
         {% endfor %}
+    </ul>
+    {% else %}
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sad_Face_Emoji_large.png?v=1480481055" alt="sadface" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <h4>No posts to display :(  </h4><br>
+            <hr class="w3-clear">
+            <a href="{% url 'home' %}">
+                <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" style='width:100%'><i class="fa fa-home"></i>  Return Home </button>
+            </a>
+        </div>
+    {% endif %}
 </div>
 {% endblock %}
