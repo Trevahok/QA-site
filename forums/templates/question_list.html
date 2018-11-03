@@ -36,7 +36,7 @@ input.submit-post, input.submit-preview{
             x.className = x.className.replace(" w3-show", "");
         }
     }
-   
+
 </script>
 {% endblock page_scripts %}
 
@@ -75,20 +75,28 @@ input.submit-post, input.submit-preview{
 
             <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>&nbsp;
                 {{question.upvotes}}</button>
-            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" id='viewAnswers'><i class="fa fa-comment"></i>&nbsp;
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom viewAnswers" ><i class="fa fa-comment"></i>&nbsp;
                 View Answers</button>
-            <hr>
-            <div class="w3-containter" id='commentList'>
-           {% render_comment_list for question%} 
-            
-            </div>
-            <hr>
-            <div class="w3-containter">
-            
-            {%render_comment_form for question%}
+            <div style='display:none;'>
+                
+                <hr>
+                <div class="w3-containter">
+                    {%render_comment_form for question%}
+                </div>
+                <hr>
+                <div class="w3-containter" >
+                    {% render_comment_list for question%} 
+                </div>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
+<script>
+$('.viewAnswers').click(
+function(){
+    $(this).next().toggle();
+}
+)
+</script>
 {% endblock content %}
