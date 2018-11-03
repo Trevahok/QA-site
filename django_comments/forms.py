@@ -99,7 +99,7 @@ class CommentDetailsForm(CommentSecurityForm):
     Handles the specific details of the comment (name, comment, etc.).
     """
     # Translators: 'Comment' is a noun here.
-    comment = forms.CharField(label=_('Comment'), widget=forms.Textarea,
+    comment = forms.CharField(label=_('Comment'), widget=forms.Textarea(attrs={'rows' : 2, 'cols': 50 , 'style': 'width:100%'}),
                               max_length=COMMENT_MAX_LENGTH)
 
     def get_comment_object(self, site_id=None):

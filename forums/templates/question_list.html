@@ -1,4 +1,17 @@
 {% extends 'header.html' %}
+{% load comments %}
+{% block page_style %}
+
+<style>
+input.submit-post, input.submit-preview{
+    width:49%;
+    border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+}
+
+</style>
+
+
+{% endblock page_style %}
 {% block page_scripts %}
 <script>
     // Accordion
@@ -23,6 +36,7 @@
             x.className = x.className.replace(" w3-show", "");
         }
     }
+   
 </script>
 {% endblock page_scripts %}
 
@@ -61,8 +75,18 @@
 
             <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>&nbsp;
                 {{question.upvotes}}</button>
-            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>&nbsp;
-                Comments</button>
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" id='viewAnswers'><i class="fa fa-comment"></i>&nbsp;
+                View Answers</button>
+            <hr>
+            <div class="w3-containter" id='commentList'>
+           {% render_comment_list for question%} 
+            
+            </div>
+            <hr>
+            <div class="w3-containter">
+            
+            {%render_comment_form for question%}
+            </div>
         </div>
     </div>
     {% endfor %}

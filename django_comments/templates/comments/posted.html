@@ -1,8 +1,3 @@
-{% extends "comments/base.html" %}
-{% load i18n %}
-
-{% block title %}{% trans "Thanks for commenting" %}.{% endblock %}
-
-{% block content %}
-  <h1>{% trans "Thank you for your comment" %}.</h1>
-{% endblock %}
+{% extends "comments/base.html" %} {% load i18n %} {% block title %}{% trans "Thanks for commenting" %}.{% endblock %} {% block content %}
+<h1>{% trans "Thank you for your comment" %}.</h1>
+<a href="{% url 'home' %}"> Return back home </a> {% endblock %}

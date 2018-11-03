@@ -1,8 +1,8 @@
-{% extends 'header.html' %} {% load comments %} 
+{% extends 'header.html' %}
 {% block page_scripts %}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css"> 
-{% endblock %} 
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+{% endblock %}
 {% block content %}
 <div class="w3-container">
     {% if user.is_authenticated %}
@@ -11,8 +11,8 @@
             <div class="w3-container w3-padding">
                 <form method="POST">
                     {% csrf_token %} {% for field in blogform %}
-                        {{field.label_tag}} &nbsp;
-                        {{ field}} &nbsp;
+                    {{field.label_tag}} &nbsp;
+                    {{ field}} &nbsp;
                     {% endfor %}
             </div>
             <button type='submit' value='Create' class='w3-btn w3-blue-grey' style='width:100%'><i class=' fa fa-send '></i>
@@ -34,7 +34,7 @@
                     {{post.event_name | title}}
                 </div>
                 <li>
-                     <label for="event_type" class="w3-small"> Description:</label>    {{ post.description }}
+                    <label for="event_type" class="w3-small"> Description:</label> {{ post.description }}
                 </li>
                 <li>
                     <label for="event_type" class="w3-small"> Event Type: </label> &nbsp;{{ post.get_type_display| title}}
