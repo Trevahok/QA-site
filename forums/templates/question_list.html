@@ -43,8 +43,8 @@ input.submit-post, input.submit-preview{
 {% block content %}
 <div class="w3-container">
     {% if user.is_authenticated %}
-    <div class="w3-row-padding w3-small">
-        <div class="w3-card-4">
+    <div class="w3-row-padding w3-small" >
+        <div class="w3-card-4" >
             <div class="w3-container w3-padding">
             <br>
                 <form method="POST">
@@ -56,17 +56,17 @@ input.submit-post, input.submit-preview{
                 Ask Question</button>
             </form>
             {% else %}
-            <div class="w3-text-wide">
+            <div class="w3-wide w3-card w3-padding w3-center w3-content" style="background-color: rgb(40,40,40);">
                 Login to Post
             </div>
             {% endif %}
         </div>
     </div>
 </div>
-<div class="w3-container ">
+<div class="w3-container w3-content">
     {% for question in questions %}
     <div class="w3-col ">
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <div class="w3-container w3-card w3-round w3-margin" style="background-color: rgb(40,40,40);"><br>
 
             <span class="w3-right w3-opacity">{{question.modified}}</span>
             <h4>{{question.text | title}}</h4>

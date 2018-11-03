@@ -10,38 +10,37 @@
   span.onclick = function() {
     modal.style.display = "none";
   }
-  };
 </script>
 {% endblock %}
 
-{% block page_style %}
-      <link rel = "stylesheet" href = "https://www.w3schools.com/lib/w3.css">
-{% endblock %}
 {% load comments %}
 {% block content %}
-   <center>
-    <div class='w3-card'>
-        {% if profile.dp %}
-        <img src='{{profile.dp.url}}'>
-        {% else %}
-        <img src = '{{MEDIA_URL}}/default.png' height = 60 width = 60>
-        {% endif %}
-        {{profile.name}}
-        <br>
-        {{profile.post}}
-        <br>
-        <label for = 'likes'>Likes:</label>
-        {{profile.likes}}
-        <br>
-        <label for='rating'>Rating:    </label>
-        {{profile.rating}}
-        <br>
-        <label for='campus'>Campus:    </label>
-        {{profile.get_campus_display}}
-        <br>
+    <div class='w3-card-4 w3-center w3-content w3-row w3-display-container' style="background-color: rgb(40,40,40);">
+        <div class="w3-col m4 w3-padding-large">
+            {% if profile.dp %}
+            <img class='w3-img w3-hover-opacity' src='{{profile.dp.url}}'>
+            {% else %}
+            <img class='w3-img w3-hover-opacity' src = '{{MEDIA_URL}}/default.png' style="width:100%">
+            {% endif %}
+        </div>
+        <div class="w3-col m8 w3-display-right">
+            {{profile.name}}
+            <br>
+            {{profile.post}}
+            <br><br>
+            <label for = 'likes'>Likes:</label>
+            {{profile.likes}}
+            <br>
+            <label for='rating'>Rating:    </label>
+            {{profile.rating}}
+            <br>
+            <label for='campus'>Campus:    </label>
+            {{profile.get_campus_display}}
+            <br>
+        </div>
     </div>
     <br>
-    <div class = 'w3-card'>
+    <div class = 'w3-card w3-content w3-center' style="background-color: rgb(40,40,40);">
         <br>
         {% if user.is_authenticated %}
         {% render_comment_form for profile %}
@@ -52,14 +51,15 @@
     </div>
     {% get_comment_count for profile as comment_count  %}
         <br>
-        <p>No. of comments: {{ comment_count }}</p>
+        <p class="w3-center">No. of comments: {{ comment_count }}</p>
        {% get_comment_list for profile as comlist %}
+    <hr class="w3-content">
    {% for comment in comlist %}
-        <div class = 'w3-card w3-green' style ="width: 80%;">
+        <div class = 'w3-card w3-hover-green w3-content w3-padding' style="background-color: rgb(35,35,35);">
             <p>{{comment.name}} says : </p>
            <p>{{comment.comment}}</p>
         </div>
+        <br>
    {% endfor %}
 
-   </center>
 {% endblock %}

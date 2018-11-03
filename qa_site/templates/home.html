@@ -3,7 +3,7 @@
 <div class="w3-container ">
     <div class="w3-col m10">
     {% for question in top_questions %}
-        <div class="w3-container w3-card w3-white w3-round w3-margin" onclick="location.href= '{% url 'forums' %}' "><br>
+        <div class="w3-container w3-card w3-round w3-margin" onclick="location.href= '{% url 'forums' %}' " style="background-color: rgb(40,40,40);"><br>
             <span class="w3-right w3-opacity">{{question.modified}}</span>
             <h4>{{question.text | title}}</h4>
             <hr class="w3-clear">
@@ -21,11 +21,11 @@
 
     {% for event in top_events %}
 
-    <div class="w3-card w3-round w3-white w3-center" style='padding:0'>
+    <div class="w3-card w3-round w3-center" style='padding:0; background-color: rgb(40,40,40);' >
         <p class='w3-panel w3-theme-d1'><strong>{{event.event_name | title}}</strong></p>
         <p class='w3-half'>{{event.timings}}</p>
         <p class='w3-half'>{{event.venue}}</p>
-        <p><a href="{% url 'events'%}"><button class="w3-button w3-block w3-theme-l4">Info</button></a></p>
+        <p><a href="{% url 'events'%}" class="w3-button w3-block w3-black">Info</a></p>
     </div>
     <br>
     
