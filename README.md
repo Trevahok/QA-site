@@ -1,5 +1,5 @@
-# qa-website
-    A Question-Answer site with added features of blogging and Faculty Polling to facilitate interactions between Seniors and Juniors of an institution.
+# VIT Student Portal
+    A complete student portal made in django, W3.CSS and lots of blood, sweat and tears ( jk ... mostly just tears ).
 
 ## Instructions
 > 1. Create a development 
@@ -34,5 +34,6 @@ python3 manage.py runserver
 
 
 > 7. Run in the browser
-+ open localhost:8000 in your browser 
-sqlite3
+```
+open localhost:8000 in your browser 
+```
