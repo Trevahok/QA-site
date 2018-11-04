@@ -1,7 +1,7 @@
 {% extends "header.html" %}
 {% block content %}
-<div class="w3-container ">
-    <div class="w3-col m10">
+<div class="w3-container">
+    <div class="w3-col m9">
     {% for question in top_questions %}
         <div class="w3-container w3-card w3-round w3-margin" onclick="location.href= '{% url 'forums' %}' " style="background-color: rgb(40,40,40);"><br>
             <span class="w3-right w3-opacity">{{question.modified}}</span>
@@ -16,18 +16,25 @@
         </div>
     {% endfor %}
     </div>
-    <div class="w3-col m2">
+    <div class="w3-col m3">
     <h5 class="w3-opacity w3-center">Upcoming events:</h5>
 
     {% for event in top_events %}
 
-    <div class="w3-card w3-round w3-center" style='padding:0; background-color: rgb(40,40,40);' >
-        <p class='w3-panel w3-theme-d1'><strong>{{event.event_name | title}}</strong></p>
-        <p class='w3-half'>{{event.timings}}</p>
-        <p class='w3-half'>{{event.venue}}</p>
-        <p><a href="{% url 'events'%}" class="w3-button w3-block w3-black">Info</a></p>
+    <div class="w3-card w3-round w3-center" style='background-color: rgb(40,40,40);' >
+        <p class='w3-panel w3-theme-d1 w3-padding'><strong>{{event.event_name | title}}</strong></p>
+        <table class="w3-table">
+            <tr>
+                <th>Time:</th>
+                <td>{{event.timings}}</td>
+            </tr>
+            <tr>
+                <th>Venue:</th>
+                <td>{{event.venue}}</td>
+            </tr>
+        </table>
+        <p><a href="{% url 'events'%}" class="w3-button w3-block w3-black" style="text-decoration:none;">Info</a></p>
     </div>
-    <br>
     
     {% endfor %}
 </div>
