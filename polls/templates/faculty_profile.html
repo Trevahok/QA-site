@@ -24,23 +24,27 @@
             {% endif %}
         </div>
         <div class="w3-col m8 w3-display-right">
-            {{profile.name}}
-            <br>
-            {{profile.post}}
-            <br><br>
-            <label for = 'likes'>Likes:</label>
-            {{profile.likes}}
-            <br>
-            <label for='rating'>Rating:    </label>
-            {{profile.rating}}
-            <br>
-            <label for='campus'>Campus:    </label>
-            {{profile.get_campus_display}}
-            <br>
+            <p class="w3-xlarge">{{profile.name}}</p>
+            <p class="w3-large"><i>{{profile.post}}</i></p>
+            <hr style="width: 50%;float:right;margin-right:25%;">
+            <table class="w3-table" style="width:40%;float:right;margin-right:25%;">
+                <tr>
+                    <th><label for = 'likes'><i>Likes:</i></label></th>
+                    <td>{{profile.likes}}</td>
+                </tr>
+                <tr>
+                    <th><label for='rating'></label><i>Rating:</i></label></th>
+                    <td>{{profile.rating}}</td>
+                </tr>
+                <tr>
+                    <th><label for='campus'><i>Campus:</i></label></th>
+                    <td>{{profile.get_campus_display}}</td>
+                </tr>
+            </table>
         </div>
     </div>
     <br>
-    <div class = 'w3-card w3-content w3-center' style="background-color: rgb(40,40,40);">
+    <div class = 'w3-card-4 w3-content w3-center' style="background-color: rgb(40,40,40);">
         <br>
         {% if user.is_authenticated %}
         {% render_comment_form for profile %}
@@ -54,12 +58,14 @@
         <p class="w3-center">No. of comments: {{ comment_count }}</p>
        {% get_comment_list for profile as comlist %}
     <hr class="w3-content">
-   {% for comment in comlist %}
-        <div class = 'w3-card w3-hover-green w3-content w3-padding' style="background-color: rgb(35,35,35);">
-            <p>{{comment.name}} says : </p>
-           <p>{{comment.comment}}</p>
-        </div>
-        <br>
-   {% endfor %}
+    <ul class="w3-ul w3-card-4 w3-content">   
+        {% for comment in comlist %}
+            <li class = 'w3-hover-green' style="background-color: rgb(35,35,35);">
+                <p class="w3-wide"><i>{{comment.name}}:</i></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{comment.comment}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
 
 {% endblock %}

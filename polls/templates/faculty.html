@@ -29,16 +29,15 @@
 
 
 {% block content %}
-<ul class="w3-ul w3-content" style="background-color: rgb(40, 40, 40);">
+    
+    <div class="w3-containter w3-center">
     {% for fac in f %}
-        <div class="w3-quarter w3-padding-large w3-card w3-btn w3-margin w3-text-white w3-hover-teal" onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'" style="width:21%;">
-            <img src="{{MEDIA_URL}}/default.png" width=50 height=50>
-            <h5 class='w3-small'>{{fac.name}}</h5>
-            <h6 class="w3-small">
-                {{fac.post}}
-            </h6>
+        <div class="w3-margin w3-padding-large w3-card w3-btn w3-text-white w3-hover-blue-grey" onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'" style="width:20%;background-color: rgb(40, 40, 40);">
+            <img src="{{MEDIA_URL}}/default.png" width=64 height=64><br><br>
+            <h5>{{fac.name}}</h5>
+            <h6><i>{{fac.post}}</i></h6>
         </div>
     {% endfor %}
-</ul>
+</div>
 <div class="clearfix"></div>
 {% endblock %}

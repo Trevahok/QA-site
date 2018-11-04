@@ -6,7 +6,7 @@
 {% block content %}
 <div class="w3-container">
     {% if user.is_authenticated %}
-    <div class="w3-row-padding w3-small">
+    <div class="w3-row w3-small w3-content">
         <div class="w3-card-4">
             <div class="w3-container w3-padding">
                 <form method="POST">
@@ -18,36 +18,34 @@
             <button type='submit' value='Create' class='w3-btn w3-blue-grey' style='width:100%'><i class=' fa fa-send '></i>
                 Create Event</button>
             </form>
-            {% else %}
-            <div class="w3-text-wide">
-                Login to Post
-            </div>
-            {% endif %}
         </div>
     </div>
+    {% else %}
+    <div class="w3-wide w3-card w3-padding w3-center w3-content" style="background-color: rgb(40,40,40);">
+        Login to Post
+    </div>
+    {% endif %}
     <br>
     {% if posts %}
-    <ul class="w3-ul s12 l6">
         {% for post in posts %}
-        <li class="w3-card w3-half" style='padding:0; padding-right:9px;margin-bottom:15px;'>
-            <ul class="w3-ul">
-                <div class=" w3-blue-grey w3-center">
+        <div class= "w3-half w3-section w3-padding-large">
+            <ul class="w3-ul w3-card-4">
+                <div class="w3-blue-grey w3-center w3-padding">
                     {{post.event_name | title}}
                 </div>
-                <li>
-                    <label for="event_type" class="w3-small"> Description:</label> {{ post.description }}
+                <li class="w3-padding-large">
+                    <label for="event_type"> Description:</label> {{ post.description }}
                 </li>
-                <li>
-                    <label for="event_type" class="w3-small"> Event Type: </label> &nbsp;{{ post.get_type_display| title}}
+                <li class="w3-padding-large">
+                    <label for="event_type"> Event Type: </label> &nbsp;{{ post.get_type_display| title}}
                 </li>
-                <li class='w3-right w3-opacity'>
+                <li class="w3-opacity w3-right-align"><i>
                     {{post.user.username}} @
                     {{ post.pub_date }}
-                </li>
+                </i></li>
             </ul>
-        </li>
+        </div>
         {% endfor %}
-    </ul>
     {% else %}
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
             <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sad_Face_Emoji_large.png?v=1480481055" alt="sadface" class="w3-left w3-circle w3-margin-right" style="width:60px">
