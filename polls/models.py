@@ -4,12 +4,12 @@ from django.db import models
 dept_choices = (
             ('sas','School of Advanced Sciences'),
             ('scse','School of Computing Science and Engineering'),
-            ('select', 'School of Electrical Engineering '),
-            ('sense','School of Electronics Engineering'),
-            ('smbs','School of Mechanical and Building Sciences'),
-            ('vitbs', 'VIT Business School'),
-            ('vitsol', 'VIT School of Law'),
-            ('vfit','VIT Fashion Institute of Technology')
+            # ('select', 'School of Electrical Engineering '),
+            # ('sense','School of Electronics Engineering'),
+            # ('smbs','School of Mechanical and Building Sciences'),
+            # ('vitbs', 'VIT Business School'),
+            # ('vitsol', 'VIT School of Law'),
+            # ('vfit','VIT Fashion Institute of Technology')
             )
 dept_choices_list=[x[0].upper for x in dept_choices]
 class Faculty(models.Model):

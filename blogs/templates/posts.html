@@ -3,6 +3,16 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
 {% endblock %}
+{% block page_style %}
+
+<style>
+
+input{
+    color: black;
+}
+</style>
+
+{% endblock page_style %}
 {% block content %}
 <div class="w3-container">
     {% if user.is_authenticated %}
@@ -11,7 +21,7 @@
             <div class="w3-container w3-padding">
                 <form method="POST">
                     {% csrf_token %} {% for field in blogform %}
-                    {{field.label_tag}} &nbsp;
+                    {{field.label_tag}} 
                     {{ field}} &nbsp;
                     {% endfor %}
             </div>
