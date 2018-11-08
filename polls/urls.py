@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
         path('<department>/', views.test, name='dept'),
         path('<department>/<pk>/',views.fac_profile,name='fac'),
-        path('<department>/<pk>/likes/<int:direction>', views.faculty_like, name ='upvote_fac')
+        path('<department>/<pk>/likes/<direction>', views.faculty_like, name ='upvote_fac')
         ]

@@ -6,4 +6,3 @@ class FacultyProfileForm(ModelForm):
     class Meta:
         model = Faculty
         exclude = '__all__'
-        fields=['rating' , 'likes']
