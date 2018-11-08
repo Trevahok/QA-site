@@ -37,7 +37,7 @@ class Faculty(models.Model):
 class Like(models.Model):
     direction_choices=(
         (1, 'like'),
-        (0 , 'dislike')
+        (-1 , 'dislike')
     )
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     faculty = models.ForeignKey(Faculty, on_delete=models.DO_NOTHING)
