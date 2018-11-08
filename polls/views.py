@@ -20,7 +20,10 @@ def faculty_like(request, department, pk, direction):
     new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk, direction= direction)
     if not created:
         f = Faculty.objects.get(id= pk)
-        f.likes +=direction
+        if direction==0:
+            f.likes -= 1
+        elif direction ==1:
+            f.likes+=1
         f.save()
         new_like.save()
         return JsonResponse({'message': 'successfully upvoted.'})

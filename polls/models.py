@@ -30,8 +30,6 @@ class Faculty(models.Model):
     name = models.CharField(default = '', max_length=50)
     post = models.CharField(default = '' , max_length=50)     # postiton like sr.professor or associate prof. etc.
     dept = models.CharField(default = '' , max_length=7, choices=dept_choices)
-    likes = models.PositiveSmallIntegerField(default =0 )
-    rating = models.PositiveSmallIntegerField(default = 0 , choices= star_choices)
     campus = models.CharField(max_length=1,blank=False, choices= campus_choices,default='c')
     def __str__(self):
         return self.name
@@ -45,5 +43,7 @@ class Like(models.Model):
     faculty = models.ForeignKey(Faculty, on_delete=models.DO_NOTHING)
     created = models.DateTimeField(auto_now_add=True)
     direction = models.SmallIntegerField(choices=direction_choices)
+    def __str__(self):
+        return str(user.username) + ',' + str(faculty)
 
   
