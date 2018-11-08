@@ -34,6 +34,8 @@ class Faculty(models.Model):
     dislikes = models.PositiveSmallIntegerField(default=0)
     rating = models.PositiveSmallIntegerField(default = 0 , choices= star_choices)
     campus = models.CharField(max_length=1,blank=False, choices= campus_choices,default='c')
+    def __str__(self):
+        return self.name
 
 class Like(models.Model):
     direction_choices=(
@@ -43,7 +45,6 @@ class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     faculty = models.ForeignKey(Faculty, on_delete=models.DO_NOTHING)
     created = models.DateTimeField(auto_now_add=True)
-    direction = models.SmallIntegerField(choices=direction_choices, max_length=2)
+    direction = models.SmallIntegerField(choices=direction_choices)
 
-    def __str__(self):
-        return self.name
+  
