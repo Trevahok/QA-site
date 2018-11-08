@@ -66,7 +66,7 @@
                                 </a></li>
                         </ul>
                         {% else %}
-                        <a class="dropdown-toggle" href="{% url 'login' %}">Log In
+                        <a class="dropdown-toggle" href="{% url 'login' %}?next={{request.path}}">Log In
                             <img id="user_icon" src=" {% static 'default.png' %} ">
                         </a>
                         {% endif %}

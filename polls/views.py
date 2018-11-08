@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_list_or_404,get_object_or_404
 from .models import Faculty, Like
 from .forms import FacultyProfileForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def test(request,department='scse'):
     instance =get_list_or_404(Faculty, dept = department)
@@ -19,6 +20,7 @@ def fac_profile(request,department,pk):
         likes += like.direction
     return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance,'likes':likes})
 
+@login_required(login_url='login')
 def faculty_like(request, department, pk, direction):
     print(direction, pk , request.user)
     try:

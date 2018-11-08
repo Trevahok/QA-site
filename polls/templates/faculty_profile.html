@@ -31,7 +31,12 @@
             <table class="w3-table" style="width:40%;float:right;margin-right:25%;">
                 <tr>
                     <th><label for = 'likes'><i>Likes:</i></label></th>
+                    {% if user.is_authenticated %}
                     <td><div id="likes" style="display:inline-block">{{likes}}</div> <i class="fa fa-thumbs-up w3-btn" style="padding-left: 5px;padding-right: 5px;" id="likeBtn"></i><i class="fa fa-thumbs-down w3-btn" style="padding-left: 5px;padding-right: 5px;" id="dislikeBtn"></i></td>
+                   {% else %}
+                    <td>Login to vote!</td>
+                    
+                    {% endif %}
                 </tr>
                 {% comment %} <tr>
                     <th><label for='rating'></label><i>Rating:</i></label></th>
