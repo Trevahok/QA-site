@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Faculty
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_list_or_404,get_object_or_404
 from .models import Faculty
 from .forms import FacultyProfileForm
@@ -15,3 +15,10 @@ def fac_profile(request,department,pk):
     if profile_update_form.is_valid():
         profile_update_form.save()
     return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance})
+
+def faculty_like(request, department, pk):
+    f = get_object_or_404(Faculty,dept=department,id= pk)
+    f.likes+=1
+    f.liked_by = request.user
+    f.save()
+    return JsonResponse({'message': 'successfully upvoted.'})

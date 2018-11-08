@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 dept_choices = (
             ('sas','School of Advanced Sciences'),
@@ -34,6 +34,7 @@ class Faculty(models.Model):
     dislikes = models.PositiveSmallIntegerField(default=0)
     rating = models.PositiveSmallIntegerField(default = 0 , choices= star_choices)
     campus = models.CharField(max_length=1,blank=False, choices= campus_choices,default='c')
+    liked_by = models.ForeignKey(User, on_delete=models.CASCADE )
 
 
     def __str__(self):
