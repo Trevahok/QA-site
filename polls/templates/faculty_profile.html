@@ -31,12 +31,11 @@
             <table class="w3-table" style="width:40%;float:right;margin-right:25%;">
                 <tr>
                     <th><label for = 'likes'><i>Likes:</i></label></th>
-                    <td>{{profile.likes}}</td>
-                    <button> LIKE  </button>
+                    <td><div id="likes" style="display:inline-block">{{profile.likes}}</div> <i class="fa fa-thumbs-up w3-btn" style="padding-left: 5px;padding-right: 5px;" id="likeBtn"></i></td>
                 </tr>
                 <tr>
                     <th><label for='rating'></label><i>Rating:</i></label></th>
-                    <td><div id="rating" style="display:inline-block">{{profile.rating}} </div> <i class="fa fa-chevron-up w3-button" style="padding-left: 5px;padding-right: 5px;" id="upvoteBtn"></i></td>
+                    <td><div id="rating" style="display:inline-block">{{profile.rating}} </div> <i class="fa fa-chevron-up w3-btn" style="padding-left: 5px;padding-right: 5px;" id="upvoteBtn"></i></td>
                 </tr>
                 <tr>
                     <th><label for='campus'><i>Campus:</i></label></th>
@@ -49,9 +48,18 @@
         $("#upvoteBtn").click(function() {
             $.ajax({
                 type: 'GET',
-                url: '{{request.path}}/upvote/',
+                url: '{{request.path}}upvote/',
                 success: function(response) {
-                    $("#rating").text("yo mama!");
+                    $("#rating").text(response['likes']);
+                },
+            });
+        });
+        $("#likeBtn").click(function() {
+            $.ajax({
+                type: 'GET',
+                url: '{{request.path}}likes/',
+                success: function(response) {
+                    $("#likes").text(response['likes']);
                 },
             });
         });

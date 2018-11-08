@@ -21,4 +21,4 @@ def faculty_like(request, department, pk):
     f.likes+=1
     f.liked_by = request.user
     f.save()
-    return JsonResponse({'message': 'successfully upvoted.'})
+    return JsonResponse({'message': 'successfully upvoted.', 'likes': f.likes})
