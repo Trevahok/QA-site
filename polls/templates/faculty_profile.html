@@ -1,5 +1,6 @@
 {% extends 'header.html' %}
 {% block page_scripts %}
+{% load static %}
 <script>
   var modal = document.getElementById('myModal');
   var img = document.getElementById('profile');
@@ -20,7 +21,7 @@
             {% if profile.dp %}
             <img class='w3-img w3-hover-opacity' src='{{profile.dp.url}}'>
             {% else %}
-            <img class='w3-img w3-hover-opacity' src = '{{MEDIA_URL}}/default.png' style="width:100%">
+            <img class='w3-img w3-hover-opacity' src = "{% static 'default.png'%}" style="width:100%">
             {% endif %}
         </div>
         <div class="w3-col m8 w3-display-right">

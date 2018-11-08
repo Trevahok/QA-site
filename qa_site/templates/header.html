@@ -53,7 +53,11 @@
                     <li class="dropdown">
                         {% if user.is_authenticated %}
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{request.user.username}}
+                        {% if details.dp %}
                             <img id="user_icon" src="{{details.dp.url}}">
+                       {% else %}
+                       <img id = "user_icon" src =" {% static 'default.png' %} ">
+                        {% endif %}
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'profile' %}?next={{request.path}}"><span class="glyphicon glyphicon-user"></span>
@@ -63,7 +67,7 @@
                         </ul>
                         {% else %}
                         <a class="dropdown-toggle" href="{% url 'login' %}">Log In
-                            <img id="user_icon" src="{{MEDIA_URL}}/default.png">
+                            <img id="user_icon" src=" {% static 'default.png' %} ">
                         </a>
                         {% endif %}
                     </li>

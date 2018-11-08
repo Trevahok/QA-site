@@ -1,4 +1,5 @@
 {% extends 'header.html' %}
+{% load static %}
 {% block page_style %}
 <style>
     @media only screen and (max-width: 700px) {
@@ -33,7 +34,7 @@
     <div class="w3-containter w3-center">
     {% for fac in f %}
         <div class="w3-margin w3-padding-large w3-card w3-btn w3-text-white w3-hover-blue-grey" onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'" style="width:20%;background-color: rgb(40, 40, 40);">
-            <img src="{{MEDIA_URL}}/default.png" width=64 height=64><br><br>
+            <img src="{% static 'default.png'%}" width=64 height=64><br><br>
             <h5>{{fac.name}}</h5>
             <h6><i>{{fac.post}}</i></h6>
         </div>
