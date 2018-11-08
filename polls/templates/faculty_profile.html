@@ -33,10 +33,10 @@
                     <th><label for = 'likes'><i>Likes:</i></label></th>
                     <td><div id="likes" style="display:inline-block">{{likes}}</div> <i class="fa fa-thumbs-up w3-btn" style="padding-left: 5px;padding-right: 5px;" id="likeBtn"></i><i class="fa fa-thumbs-down w3-btn" style="padding-left: 5px;padding-right: 5px;" id="dislikeBtn"></i></td>
                 </tr>
-                <tr>
+                {% comment %} <tr>
                     <th><label for='rating'></label><i>Rating:</i></label></th>
                     <td><div id="rating" style="display:inline-block"><\rating\></div> <i class="fa fa-chevron-up w3-btn" style="padding-left: 5px;padding-right: 5px;" id="upvoteBtn"></i></td>
-                </tr>
+                </tr> {% endcomment %}
                 <tr>
                     <th><label for='campus'><i>Campus:</i></label></th>
                     <td>{{profile.get_campus_display}}</td>

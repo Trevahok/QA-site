@@ -25,15 +25,28 @@
 
 {% block page_scripts %}
 <script>
+function myFunction(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".js-filter").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+};
+
 </script>
 {% endblock %}
 
 
 {% block content %}
+<div class="w3-container w3-center">
+ <input class="w3-input w3-border w3-padding w3-center" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction()" style='color: black;'>
+
+</div>
     
     <div class="w3-containter w3-center">
     {% for fac in f %}
-        <div class="w3-margin w3-padding-large w3-card w3-btn w3-text-white w3-hover-blue-grey" onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'" style="width:20%;background-color: rgb(40, 40, 40);">
+        <div class="w3-margin w3-padding-large w3-card w3-btn w3-text-white w3-hover-blue-grey js-filter" onclick="location.href='/faculty/{{fac.dept}}/{{fac.id}}/'" style="width:20%;background-color: rgb(40, 40, 40);">
             <img src="{% static 'default.png'%}" width=64 height=64><br><br>
             <h5>{{fac.name}}</h5>
             <h6><i>{{fac.post}}</i></h6>
