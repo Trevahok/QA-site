@@ -20,9 +20,14 @@ def fac_profile(request,department,pk):
     return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance,'likes':likes})
 
 def faculty_like(request, department, pk, direction):
-    new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk)
-    new_like.direction = direction
-    new_like.save()
+    print(direction, pk , request.user)
+    try:
+        new_like= Like.objects.get(user=request.user, faculty_id=pk)
+        new_like.direction = direction
+        new_like.save()
+    except Like.DoesNotExist:
+        new_like, created = Like.objects.create(user=request.user , faculty_id=pk , direction= int(direction))
+        new_like.save()
     likes = 0
     for like in Like.objects.filter(faculty=Faculty.objects.get(id=pk)):
         likes += like.direction
