@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Faculty
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_list_or_404,get_object_or_404
-from .models import Faculty
+from .models import Faculty, Like
 from .forms import FacultyProfileForm
 # Create your views here.
 def test(request,department='scse'):
@@ -17,8 +17,10 @@ def fac_profile(request,department,pk):
     return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance})
 
 def faculty_like(request, department, pk):
-    f = get_object_or_404(Faculty,dept=department,id= pk)
-    f.likes+=1
-    f.liked_by = request.user
-    f.save()
-    return JsonResponse({'message': 'successfully upvoted.', 'likes': f.likes})
+    new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk)
+    if not created:
+        new_like.save()
+        return JsonResponse({'message': 'successfully upvoted.'})
+    else:
+        return JsonResponse({'message': 'you have already upvoted.'})
+
