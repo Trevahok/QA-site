@@ -14,19 +14,17 @@ def fac_profile(request,department,pk):
     profile_update_form = FacultyProfileForm(request.POST or None,request.FILES or None,instance=instance)
     if profile_update_form.is_valid():
         profile_update_form.save()
-    return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance})
+    likes = 0
+    for like in Like.objects.filter(faculty=Faculty.objects.get(id=pk)):
+        likes += like.direction
+    return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance,'likes':likes})
 
 def faculty_like(request, department, pk, direction):
-    new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk, direction= direction)
-    if not created:
-        f = Faculty.objects.get(id= pk)
-        if direction==0:
-            f.likes -= 1
-        elif direction ==1:
-            f.likes+=1
-        f.save()
-        new_like.save()
-        return JsonResponse({'message': 'successfully upvoted.'})
-    else:
-        return JsonResponse({'message': 'you have already upvoted.'})
+    new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk)
+    new_like.direction = direction
+    new_like.save()
+    likes = 0
+    for like in Like.objects.filter(faculty=Faculty.objects.get(id=pk)):
+        likes += like.direction
+    return JsonResponse({'message': 'successfully liked/disliked!', 'likes':likes})
 
