@@ -16,9 +16,11 @@ def fac_profile(request,department,pk):
         profile_update_form.save()
     return render(request, 'faculty_profile.html', {'rating':profile_update_form,'profile':instance})
 
-def faculty_like(request, department, pk):
-    new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk)
+def faculty_like(request, department, pk, direction):
+    new_like, created = Like.objects.get_or_create(user=request.user, faculty_id=pk, direction= direction)
     if not created:
+        f = Faculty.objects.get(id= pk).likes+=direction
+        f.save()
         new_like.save()
         return JsonResponse({'message': 'successfully upvoted.'})
     else:

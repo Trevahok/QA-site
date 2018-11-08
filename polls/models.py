@@ -31,7 +31,6 @@ class Faculty(models.Model):
     post = models.CharField(default = '' , max_length=50)     # postiton like sr.professor or associate prof. etc.
     dept = models.CharField(default = '' , max_length=7, choices=dept_choices)
     likes = models.PositiveSmallIntegerField(default =0 )
-    dislikes = models.PositiveSmallIntegerField(default=0)
     rating = models.PositiveSmallIntegerField(default = 0 , choices= star_choices)
     campus = models.CharField(max_length=1,blank=False, choices= campus_choices,default='c')
     def __str__(self):
