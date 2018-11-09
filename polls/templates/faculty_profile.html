@@ -1,6 +1,6 @@
 {% extends 'header.html' %}
-{% block page_scripts %}
 {% load static %}
+{% block page_scripts %}
 <script>
   var modal = document.getElementById('myModal');
   var img = document.getElementById('profile');
@@ -24,7 +24,7 @@
             <img class='w3-img w3-hover-opacity' src = "{% static 'default.png'%}" style="width:100%">
             {% endif %}
         </div>
-        <div class="w3-col m8 w3-display-right">
+        <div class="w3-col m8 s12 w3-display-right">
             <p class="w3-xlarge">{{profile.name}}</p>
             <p class="w3-large"><i>{{profile.post}}</i></p>
             <hr style="width: 50%;float:right;margin-right:25%;">
